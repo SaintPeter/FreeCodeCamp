@@ -265,13 +265,13 @@
         "Change the <code>0</code> so that sum will equal <code>20</code>."
       ],
       "tests": [
-        "assert((function(){if(sum === 20 && editor.getValue().match(/\\+/g).length >= 2){return true;}else{return false;}})(), 'message: Make the variable <code>sum</code> equal 20.');"
+        "assert((function(){if(sum === 20 && editor.getValue().match(/\\+/g).length >= 1){return true;}else{return false;}})(), 'message: Make the variable <code>sum</code> equal 20.');"
       ],
       "challengeSeed": [
         "var sum = 10 + 0;",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(z){return 'sum='+z;})(sum);"
       ],
       "type": "waypoint",
@@ -1282,17 +1282,17 @@
         "assert(editor.getValue().match(/\\/\\\\S\\/g/g), 'message: Use the <code>/\\S/g</code> regular expression to find non-space characters in <code>testString</code>.');",
         "assert(test === 49, 'message: Your regular expression should find forty nine non-space characters in the <code>testString</code>.');"
       ],
+      "head": [
+        "var test = (function(){"
+      ],
       "challengeSeed": [
-        "var test = (function(){",
-        "  var testString = \"How many non-space characters are there in this sentence?\";",
+        "var testString = \"How many non-space characters are there in this sentence?\";",
         "",
-        "  // Only change code below this line.",
+        "var expression = /./g;",
         "",
-        "  var expression = /./g;",
-        "",
-        "  // Only change code above this line.",
-        "",
-        "  return testString.match(expression).length;",
+        "  return testString.match(expression).length;"
+      ],
+      "tail": [
         "})();(function(){return test;})();"
       ],
       "type": "waypoint",
