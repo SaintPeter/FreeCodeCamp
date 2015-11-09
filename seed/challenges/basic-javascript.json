@@ -68,6 +68,7 @@
       "challengeSeed": [
         "var ourName = \"Free Code Camp\";",
         "",
+        "// Only change code below this line.",
         ""
       ],
       "tail": [
@@ -92,9 +93,10 @@
         "var firstName = \"Alan\";",
         "var lastName = \"Turing\";",
         "",
-        "",
-        "// Only change code above this line.",
-        "",
+        "// Only change code below this line.",
+        ""
+      ],
+      "tail": [
         "if(typeof(myFirstName) !== \"undefined\" && typeof(myLastName) !== \"undefined\"){(function(){return myFirstName + ', ' + myLastName;})();}"
       ],
       "type": "waypoint",
@@ -125,10 +127,9 @@
         "",
         "lastNameLength = lastName;",
         "",
-        "",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "if(typeof(lastNameLength) !== \"undefined\"){(function(){return lastNameLength;})();}"
       ],
       "type": "waypoint",
@@ -159,9 +160,9 @@
         "",
         "firstLetterOfLastName = lastName;",
         "",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(v){return v;})(firstLetterOfLastName);"
       ],
       "type": "waypoint",
@@ -188,9 +189,9 @@
         "",
         "var thirdLetterOfLastName = lastName;",
         "",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(v){return v;})(thirdLetterOfLastName);"
       ],
       "type": "waypoint",
@@ -218,9 +219,9 @@
         "",
         "var lastLetterOfLastName = lastName;",
         "",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(v){return v;})(lastLetterOfLastName);"
       ],
       "type": "waypoint",
@@ -248,9 +249,9 @@
         "",
         "var secondToLastLetterOfLastName = lastName;",
         "",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(v){return v;})(secondToLastLetterOfLastName);"
       ],
       "type": "waypoint",
@@ -265,7 +266,8 @@
         "Change the <code>0</code> so that sum will equal <code>20</code>."
       ],
       "tests": [
-        "assert((function(){if(sum === 20 && editor.getValue().match(/\\+/g).length >= 1){return true;}else{return false;}})(), 'message: Make the variable <code>sum</code> equal 20.');"
+        "assert(sum === 20, 'message: Make the variable <code>sum</code> equal 20.');",
+        "assert(editor.getValue().match(/\\+/g).length >= 1, 'message: Use the <code>+</code> operator to make <code>sum</code> equal 20.');"
       ],
       "challengeSeed": [
         "var sum = 10 + 0;",
