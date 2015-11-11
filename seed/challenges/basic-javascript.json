@@ -49,6 +49,9 @@
       "tail": [
         "welcomeToBooleans();"
       ],
+      "solutions": [
+        "function welcomeToBooleans() { return true; }"
+      ],
       "type": "waypoint",
       "challengeType": 1
     },
@@ -74,6 +77,9 @@
       "tail": [
         "if(typeof(myName) !== \"undefined\"){(function(v){return v;})(myName);}"
       ],
+      "solutions": [
+        "var myName = 'Testing';"
+      ],
       "type": "waypoint",
       "challengeType": 1
     },
@@ -98,6 +104,9 @@
       ],
       "tail": [
         "if(typeof(myFirstName) !== \"undefined\" && typeof(myLastName) !== \"undefined\"){(function(){return myFirstName + ', ' + myLastName;})();}"
+      ],
+      "solutions": [
+        "var myFirstName='Testy'; var myLastName='McTesterson';"
       ],
       "type": "waypoint",
       "challengeType": 1
@@ -288,13 +297,14 @@
         "Change the <code>0</code> so that difference will equal <code>12</code>."
       ],
       "tests": [
-        "assert((function(){if(difference === 12 && editor.getValue().match(/\\-/g)){return true;}else{return false;}})(), 'message: Make the variable <code>difference</code> equal 12.');"
+        "assert(editor.getValue().match(/\\-/g) > 0, 'message: Use subtraction to make the <code>difference</code> equal 12.');",
+        "assert(difference === 12, 'message: Make the variable <code>difference</code> equal 12.');"
       ],
       "challengeSeed": [
         "var difference = 45 - 0;",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(z){return 'difference='+z;})(difference);"
       ],
       "type": "waypoint",
@@ -1285,17 +1295,19 @@
         "assert(test === 49, 'message: Your regular expression should find forty nine non-space characters in the <code>testString</code>.');"
       ],
       "head": [
-        "var test = (function(){"
+        "var test = (function(){",
+        "var count = 0;"
       ],
       "challengeSeed": [
         "var testString = \"How many non-space characters are there in this sentence?\";",
         "",
         "var expression = /./g;",
         "",
-        "  return testString.match(expression).length;"
+        "count = testString.match(expression).length;"
       ],
       "tail": [
-        "})();(function(){return test;})();"
+        "return count;})();",
+        "(function(){return test;})();"
       ],
       "type": "waypoint",
       "challengeType": 1
