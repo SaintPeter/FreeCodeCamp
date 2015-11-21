@@ -1364,6 +1364,13 @@ common.init.push((function() {
   };
 }(window.$)));
 
+// Definition Popover
+common.init.push(function($) {
+    console.log("jquery:", typeof $.fn.popover);
+    $('.definition').popover();
+    console.log('popover initialized');
+});
+
 function bonfireExecute(shouldTest) {
   var head = common.arrayToNewLineString(common.head);
   var tail = common.arrayToNewLineString(common.tail);

@@ -4,6 +4,7 @@
 
 
 // Inline and block code styles
+dfn,
 code,
 kbd,
 pre,
@@ -18,6 +19,20 @@ code {
   color: @code-color;
   background-color: @code-bg;
   border-radius: @border-radius-base;
+}
+
+// Inline definitions
+dfn {
+  font-size: 90%;
+  color: @code-color;
+  background-color: @code-bg;
+  border-radius: @border-radius-base;
+}
+
+// Clickable inline definitions
+dfn.definition {
+  border-bottom: 1px dashed;
+  cursor: pointer;
 }
 
 // User input typically entered via keyboard

@@ -39,6 +39,8 @@ destroy()
           .replace(/\:/g, '')
           .replace(/\s/g, '-');
 
+        challenge.description = addDefinitions(challenge.description);
+
         challenge.fileName = fileName;
         challenge.order = order;
         challenge.suborder = index + 1;

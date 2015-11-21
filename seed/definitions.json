@@ -1,0 +1,9 @@
+{
+  "definitions": {
+    "a-title": {
+      "name": "a title",
+      "content": "a content",
+      "wiki": "a wookie"
+    }
+  }
+}
