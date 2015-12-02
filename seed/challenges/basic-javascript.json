@@ -2007,24 +2007,31 @@
       "title": "Use Conditional Logic with If Statements",
       "description": [
         "We can use <code>if</code> statements in JavaScript to only execute code if a certain condition is met.",
-        "<code>if</code> statements require some sort of boolean condition to evaluate.",
+        "<code>if</code> statements require a boolean condition to evaluate.  If the boolean evaluates to true, the statement inside the curly braces executes.  If it evaluates to false, the code will not execute.",
         "For example:",
-        "<code>if (1 > 2) {</code>",
-        "<code>&nbsp;&nbsp;return \"Greater Than\";</code>",
-        "<code>}</code>",
-        "Let's use <code>if</code> and <code>else</code> statements to make a coin-flip game.",
-        "Create <code>if</code> and <code>else</code> statements to return the string <code>\"heads\"</code> if the flip variable is zero, or else return the string <code>\"tails\"</code> if the flip variable is not zero."
+        "<blockquote>function test(myVal) {<br />  if (myVal > 10) {<br />     return \"Greater Than\";<br />  }<br />  return \"Not Greater Than\";<br />}</blockquote>",
+        "If <code>myVal</code> is greater than <code>10</code>, the function will return \"Greater Than\".  If it is not, the function will return \"Not Greater Than\".",
+        "<h4>Instructions</h4>Create an <code>if</code> statement inside the function to return <code>\"Yes\"</code> if <code>testMe</code> is greater than <code>5</code>.  Return <code>\"No\"</code> if it is less than <code>5</code>."
       ],
       "tests": [
-        "assert(editor.getValue().match(/if/g).length >= 2, 'message: Create a new if statement.');",
-        "assert(editor.getValue().match(/else/g).length >= 1, 'message: Created a new else statement.');",
-        "assert((function(){var result = myFunction();if(result === 'heads' || result === 'tails'){return true;} else {return false;}})(), 'message: <code>myFunction</code> should either return <code>heads</code> or <code>tails</code>.');",
-        "assert((function(){var result = myFunction();if(result === 'heads' && flip === 0 || result === 'tails' && flip !== 0){return true;} else {return false;}})(), 'message: <code>myFunction</code> should return <code>heads</code> when flip equals 0 and <code>tails</code> when flip equals 1.');"
+        "assert(typeof myFunction === \"function\", 'message: <code>myFunction</code> should be a function');",
+        "assert(typeof myFunction(4) === \"string\", 'message: <code>myFunction(4)</code> should return a string');",
+        "assert(typeof myFunction(6) === \"string\", 'message: <code>myFunction(6)</code> should return a string');",
+        "assert(myFunction(4) === \"No\", 'message: <code>myFunction(4)</code> should \"No\"');",
+        "assert(myFunction(5) === \"No\", 'message: <code>myFunction(5)</code> should \"No\"');",
+        "assert(myFunction(6) === \"Yes\", 'message: <code>myFunction(6)</code> should \"Yes\"');"
       ],
       "challengeSeed": [
-        "var flip = Math.floor(Math.random() * (1 - 0 + 1)) + 0;",
+        "// Example",
+        "function ourFunction(testMe) {",
+        "  if (testMe > 10) { ",
+        "    return \"Yes\";",
+        "  }",
+        "  return \"No\";",
+        "}",
         "",
-        "function myFunction() {",
+        "// Setup",
+        "function myFunction(testMe) {",
         "",
         "  // Only change code below this line.",
         "",
@@ -2033,8 +2040,15 @@
         "  // Only change code above this line.",
         "",
         "}",
-        "",
-        "var result = myFunction();if(typeof(flip) !== \"undefined\" && typeof(flip) === \"number\" && typeof(result) !== \"undefined\" && typeof(result) === \"string\"){(function(y,z){return 'flip = ' + y.toString() + ', text = ' + z;})(flip, result);}"
+        ""
+      ],
+      "solutions": [
+        "function myFunction(testMe) {",
+        "  if (testMe > 5) {",
+        "    return 'Yes';",
+        "  }",
+        "  return 'No';",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1"
@@ -2043,7 +2057,12 @@
       "id": "56533eb9ac21ba0edf2244d0",
       "title": "Comparison Operators - Equality Test",
       "description": [
-        "=="
+        "There are many <dfn>Comparison Operators</dfn> in Javascript.  All of these operators return a boolean <code>true</code> or <code>false</code> value.",
+        "The most basic operators is the equality operator <code>==</code>.  The equality operator compares to values and returns true if they're equivilent or false if they are not.  Note that equality is different from assignement (<code>=</code>), which returns the value to the right of the operator.",
+        "<blockquote>function test(myVal) {<br />  if (myVal == 10) {<br />     return \"Equal\";<br />  }<br />  return \"Not Equal\";<br />}</blockquote>",
+        "If <code>myVal</code> is equal to <code>10</code>, the function will return \"Equal\".  If it is not, the function will return \"Not Equal\".",
+        "The equality operator will do it's best to convert values for comparison, for example:",
+        "<blockquote>   1   ==  1        // true<br>  \"1\"  ==  1        // true<br />   1   == '1'       // true<br />   0   == false     // true<br>   0   == null      // false<br>   0   == undefined  // false<br> null  == undefined // true</blockquote>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
