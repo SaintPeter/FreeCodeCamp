@@ -13,7 +13,7 @@
         "<code>// This is a comment.</code>",
         "The slash-star-star-slash comment will comment out everything between the <code>/*</code> and the <code>*/</code> characters:",
         "<code>/* This is also a comment */</code>",
-        "Try creating one of each."
+        "<h4>Instructions</h4>Try creating one of each type of comment."
       ],
       "tests": [
         "assert(editor.getValue().match(/(\\/\\/)...../g), 'message: Create a <code>//</code> style comment that contains at least five letters.');",
@@ -29,7 +29,7 @@
       "description": [
         "In computer science, <code>data structures</code> are things that hold data. JavaScript has seven of these. For example, the <code>Number</code> data structure holds numbers.",
         "Let's learn about the most basic data structure of all: the <code>Boolean</code>. Booleans can only hold the value of either true or false. They are basically little on-off switches.",
-        "Let's modify our <code>welcomeToBooleans</code> function so that it will return <code>true</code> instead of <code>false</code> when the run button is clicked."
+        "<h4>Instructions</h4>Modify the <code>welcomeToBooleans</code> function so that it will return <code>true</code> instead of <code>false</code> when the run button is clicked."
       ],
       "tests": [
         "assert(typeof(welcomeToBooleans()) === 'boolean', 'message: The <code>welcomeToBooleans()</code> function should return a boolean &#40;true/false&#41; value.');",
@@ -58,15 +58,18 @@
         "When we store data in a <code>data structure</code>, we call it a <code>variable</code>. These variables are no different from the x and y variables you use in math.",
         "Let's create our first variable and call it \"myName\".",
         "You'll notice that in <code>myName</code>, we didn't use a space, and that the \"N\" is capitalized. JavaScript variables are written in <code>camel case</code>. An example of camel case is: camelCase.",
-        "Now, use the <code>var</code> keyword to create a variable called <code>myName</code>. Set its value to your name, in double quotes.",
+        "<h4>Instructions</h4>Use the <code>var</code> keyword to create a variable called <code>myName</code>. Set its value to your name, in double quotes.",
+        "<strong>Hint</strong>",
         "Look at the <code>ourName</code> example if you get stuck."
       ],
       "tests": [
         "assert((function(){if(typeof(myName) !== \"undefined\" && typeof(myName) === \"string\" && myName.length > 0){return true;}else{return false;}})(), 'message: <code>myName</code> should be a string that contains at least one character in it.');"
       ],
       "challengeSeed": [
+        "// Example",
         "var ourName = \"Free Code Camp\";",
         "",
+        "// Only change code below this line",
         ""
       ],
       "tail": [
@@ -86,8 +89,7 @@
         "<code>myVar = 5;</code>",
         "<code>myNum = myVar;</code>",
         "Assigns <code>5</code> to <code>myVar</code> and then resolves <code>myVar</code> to <code>5</code>  again and assigns it to <code>myNum</code>.",
-        "<h4>Instructions</h4>",
-        "Assign the value 7 to variable <code>a</code>",
+        "<h4>Instructions</h4>Assign the value 7 to variable <code>a</code>",
         "Assign the contents of <code>a</code> to variable <code>b</code>."
       ],
       "releasedOn": "11/27/2015",
@@ -98,6 +100,7 @@
         "assert(editor.getValue().match(/b\\s*=\\s*a\\s*;/g), 'message: <code>a</code> should be assigned to <code>b</code> with <code>=</code>');"
       ],
       "challengeSeed": [
+        "// Setup",
         "var a;",
         "var b = 2;",
         "",
@@ -130,17 +133,17 @@
         "<code>var myVar = 0;</code>",
         "Creates a new variable called <code>myVar</code> and assigns it an inital value of <code>0</code>.",
         "",
-        "<h4>Instructions</h4>",
-        "Assign an initial value of <code>9</code> to the variable <code>a</code>."
+        "<h4>Instructions</h4>Define a variable <code>a</code> with <code>var</code> and initialize it to a value of <code>9</code>."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
         "assert(/var\\s+a\\s*=\\s*9\\s*/.test(editor.getValue()), 'message: Initialize <code>a</code> to a value of <code>9</code>');"
       ],
       "challengeSeed": [
-        "var example = 19;",
+        "// Example",
+        "var ourVar = 19;",
         "",
-        "// Only add code below this line",
+        "// Only change code below this line",
         ""
       ],
       "tail": [
@@ -161,9 +164,8 @@
       "id": "56533eb9ac21ba0edf2244aa",
       "title": "Understanding Uninitialized Variables",
       "description": [
-        "When Javascript variables are declared, they have an inital value of <dfn>undefined</dfn>.  If you do a mathematical operation on an <code>undefined</code> variable your result will be <dfn>NaN</dfn> which means \"Not a Number\". If you concatanate a string with an <code>undefined</code> variable, you will get a <dfn>literal</dfn> string of \"undefined\".",
-        "<h4>Instructions</h4>",
-        "Initialize the three variables <code>a</code>, <code>b</code>, and <code>c</code> with <code>5</code>, <code>10</code>, and <code>\"I am a\"</code> respectively so that they will not be <code>undefined</code>."
+        "When Javascript variables are declared, they have an inital value of <dfn>undefined</dfn>.  If you do a mathematical operation on an <code>undefined</code> variable your result will be <dfn>NaN</dfn> which means \"Not a Number\". If you concatanate a string with an <code>undefined</code> variable, you will get a <dfn>literal string</dfn> of \"undefined\".",
+        "<h4>Instructions</h4>Initialize the three variables <code>a</code>, <code>b</code>, and <code>c</code> with <code>5</code>, <code>10</code>, and <code>\"I am a\"</code> respectively so that they will not be <code>undefined</code>."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -178,7 +180,7 @@
         "var b;",
         "var c;",
         "",
-        "// Do not change code below with line",
+        "// Do not change code below this line",
         "",
         "a = a + 1;",
         "b = b + 5;",
@@ -210,18 +212,18 @@
       "description": [
         "In Javascript all variables and function names are case sensitive.  This means that capitalization matters.",
         "<code>MYVAR</code> is not the same as <code>MyVar</code> nor <code>myvar</code>.  It is possible to have mulitpe distinct variables with the same name but different capitalization. It is strongly reccomended that for sake of clarity you <em>do not</em> use this language feature.",
-        "<h4>Best Practice</h4><div class=\"bestpractice\">Variables in Javascript should use camelCase.  In camelCase, variables made of multiple words have the first word in all lowercase and the first letter of each subsequent word capitalized.",
-        "Examples:",
-        "<code>var someVariable;</code>",
-        "<code>var anotherVariableName;</code>",
-        "<code>car thisVariableNameIsTooLong;</code></div>",
-        "<h4>Instructions</h4>Correct the variable assignements so their names match their variable declarations above.\""
+        "<h4>Best Practice</h4><div class=\"bestpractice\">Variables in Javascript should use camelCase.  In camelCase, variables made of multiple words have the first word in all lowercase and the first letter of each subsequent word capitalized.</div>",
+        "<strong>Examples:</strong><blockquote>var someVariable;</br />var anotherVariableName;</br />var thisVariableNameIsTooLong;</blockquote>",
+        "<h4>Instructions</h4>Correct the variable assignements so their names match their variable declarations above."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(StUdLyCapVaR === 10, 'message: StUdLyCapVaR has the correct case');\nassert(properCamelCase === \"A String\", 'message: properCamelCase has the correct case');\nassert(TitleCaseOver === 9000, 'message: TitleCaseOver has the correct case');"
+        "assert(StUdLyCapVaR === 10, 'message: StUdLyCapVaR has the correct case');",
+        "assert(properCamelCase === \"A String\", 'message: properCamelCase has the correct case');",
+        "assert(TitleCaseOver === 9000, 'message: TitleCaseOver has the correct case');"
       ],
       "challengeSeed": [
+        "// Setup",
         "var StUdLyCapVaR;",
         "var properCamelCase;",
         "var TitleCaseOver;",
@@ -230,7 +232,7 @@
         "",
         "STUDLYCAPVAR = 10;",
         "PRoperCAmelCAse = \"A String\";",
-        "tITLEcASEoVER = \"9000\";",
+        "tITLEcASEoVER = 9000;",
         ""
       ],
       "solutions": [
@@ -282,7 +284,7 @@
       ],
       "tests": [
         "assert(difference === 12, 'message: Make the variable <code>difference</code> equal 12.');",
-        "assert(/-/.test(editor.getValue()),'message: User the <code>-</code> operator');"
+        "assert(/\\d+\\s*-\\s*\\d+/.test(editor.getValue()),'message: User the <code>-</code> operator');"
       ],
       "challengeSeed": [
         "var difference = 45 - 0;",
@@ -291,6 +293,9 @@
       ],
       "tail": [
         "(function(z){return 'difference='+z;})(difference);"
+      ],
+      "solutions": [
+        "var difference = 45 - 33;"
       ],
       "type": "waypoint",
       "challengeType": "1"
@@ -314,6 +319,9 @@
       ],
       "tail": [
         "(function(z){return 'product = '+z;})(product);"
+      ],
+      "solutions": [
+        "var product = 8 * 10;"
       ],
       "type": "waypoint",
       "challengeType": "1"
@@ -498,7 +506,7 @@
         "<code>Math.floor(5 / 2) === 2<br />2 * 2 === 4<br />5 - 4 === 1</code>",
         "<strong>Usage</strong>",
         "Modulus can be helpful in creating alternating or cycling values.  For example, in a loop an increasing variable <code>myVar % 2</code> will alternate between 0 and 1 as myVar goes between even and odd numbers respectively.",
-        "<h4>Instructions<h4>Set <code>remainder</code> equal to the remainder of 11 divided by 3 using the modulus operator."
+        "<h4>Instructions</h4>Set <code>remainder</code> equal to the remainder of 11 divided by 3 using the modulus operator."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -2040,7 +2048,9 @@
         "  // Only change code above this line.",
         "",
         "}",
-        ""
+        "",
+        "// Change this value to test",
+        "myFunction(10);"
       ],
       "solutions": [
         "function myFunction(testMe) {",
@@ -2055,26 +2065,42 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d0",
-      "title": "Comparison Operators - Equality Test",
+      "title": "Comparison with the Equality Operator",
       "description": [
         "There are many <dfn>Comparison Operators</dfn> in Javascript.  All of these operators return a boolean <code>true</code> or <code>false</code> value.",
         "The most basic operators is the equality operator <code>==</code>.  The equality operator compares to values and returns true if they're equivilent or false if they are not.  Note that equality is different from assignement (<code>=</code>), which returns the value to the right of the operator.",
-        "<blockquote>function test(myVal) {<br />  if (myVal == 10) {<br />     return \"Equal\";<br />  }<br />  return \"Not Equal\";<br />}</blockquote>",
+        "<blockquote>function equalityTest(myVal) {<br />  if (myVal == 10) {<br />     return \"Equal\";<br />  }<br />  return \"Not Equal\";<br />}</blockquote>",
         "If <code>myVal</code> is equal to <code>10</code>, the function will return \"Equal\".  If it is not, the function will return \"Not Equal\".",
         "The equality operator will do it's best to convert values for comparison, for example:",
-        "<blockquote>   1   ==  1        // true<br>  \"1\"  ==  1        // true<br />   1   == '1'       // true<br />   0   == false     // true<br>   0   == null      // false<br>   0   == undefined  // false<br> null  == undefined // true</blockquote>"
+        "<blockquote>   1   ==  1        // true<br>  \"1\"  ==  1        // true<br />   1   == '1'       // true<br />   0   == false     // true<br>   0   == null      // false<br>   0   == undefined // false<br> null  == undefined // true</blockquote>",
+        "<h4>Instructions</h4>Add the <code>equality operator</code> to the indicated line so the function will return \"Equal\" when <code>val</code> is equivilent to <code>12</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(myTest(10) === \"Not Equal\", 'message: <code>myTest(10)</code> should return \"Not Equal\"');",
+        "assert(myTest(12) === \"Equal\", 'message: <code>myTest(12)</code> should return \"Equal\"');",
+        "assert(myTest(\"12\") === \"Equal\", 'message: <code>myTest(\"12\")</code> should return \"Equal\"');",
+        "assert(editor.getValue().match(/val\\s*==\\s*\\d+/).length > 1, 'message: You should use the <code>==</code> operator');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "function myTest(val) {",
+        "  if(val) { // Change this line",
+        "    return \"Equal\";",
+        "  }",
+        "  return \"Not Equal\";",
+        "}",
         "",
-        "",
-        ""
+        "// Change this value to test",
+        "myTest(10);"
       ],
       "solutions": [
-        ""
+        "function myTest(val) {",
+        "  if(val == 12) {",
+        "    return \"Equal\";",
+        "  }",
+        "  return \"Not Equal\";",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -2086,21 +2112,38 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d1",
-      "title": "Comparison Operators - Strict Equality Test",
+      "title": "Comparison with the Strict Equality Operator",
       "description": [
-        "==="
+        "Strict equality (<code>===</code>) is the counterpart to the equality operator (<code>==</code>).  Unlike the equality operator, strict equality tests both the <dfn>type</dfn> and <dfn>value</dfn> of the compared elements.",
+        "<strong>Examples</strong><blockquote>3 === 3   // true<br />3 === '3' // false</blockquote>",
+        "<h4>Instructions</h4>Change the equality operator to a strict equality on the <code>if</code> statement so the function will return \"Equal\" when <code>val</code> is strictltly equal to <code>7</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(myTest(10) === \"Not Equal\", 'message: <code>myTest(10)</code> should return \"Not Equal\"');",
+        "assert(myTest(7) === \"Equal\", 'message: <code>myTest(7)</code> should return \"Equal\"');",
+        "assert(myTest(\"7\") === \"Not Equal\", 'message: <code>myTest(\"7\")</code> should return \"Not Equal\"');",
+        "assert(editor.getValue().match(/val\\s*===\\s*\\d+/).length > 1, 'message: You should use the <code>===</code> operator');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "function myTest(val) {",
+        "  if(val) { // Change this line",
+        "    return \"Equal\";",
+        "  }",
+        "  return \"Not Equal\";",
+        "}",
         "",
-        "",
-        ""
+        "// Change this value to test",
+        "myTest(10);"
       ],
       "solutions": [
-        ""
+        "function myTest(val) {",
+        "  if(val == 7) {",
+        "    return \"Equal\";",
+        "  }",
+        "  return \"Not Equal\";",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -2112,21 +2155,40 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d2",
-      "title": "Comparison Operators - Inequality",
+      "title": "Comparison with the Inequality Operator",
       "description": [
-        "!="
+        "The inequality operator (<code>!=</code>) is the opposite of the equality operator.  It means \"Not Equal\" and returns <code>false</code> where equality would return <code>true</code> and <i>vice versa</i>.  Like the equality operator, the inequality operator will convert types.",
+        "<strong>Examples</strong><blockquote>1 !=   2     // true<br />1 !=  \"1\"    // false<br />1 !=  '1'    // false<br />1 !=  true   // false<br />0 !=  false  // false</blockquote>",
+        "<h4>Instructions</h4>Add the inequality operator <code>!=</code> to the <code>if</code> statement so the function will return \"Not Equal\" when <code>val</code> is not equivilent to <code>99</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(myTest(99) === \"Equal\", 'message: <code>myTest(99)</code> should return \"Equal\"');",
+        "assert(myTest(\"99\") === \"Equal\", 'message: <code>myTest(\"99\")</code> should return \"Equal\"');",
+        "assert(myTest(12) === \"Not Equal\", 'message: <code>myTest(12)</code> should return \"Not Equal\"');",
+        "assert(myTest(\"12\") === \"Not Equal\", 'message: <code>myTest(\"12\")</code> should return \"Not Equal\"');",
+        "assert(myTest(\"bob\") === \"Not Equal\", 'message: <code>myTest(\"bob\")</code> should return \"Not Equal\"');",
+        "assert(editor.getValue().match(/val\\s*!=\\s*\\d+/).length > 0, 'message: You should use the <code>!=</code> operator');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "function myTest(val) {",
+        "  if(val) { // Change this line",
+        "    return \"Not Equal\";",
+        "  }",
+        "  return \"Equal\";",
+        "}",
         "",
-        "",
-        ""
+        "// Change this value to test",
+        "myTest(10);"
       ],
       "solutions": [
-        ""
+        "function myTest(val) {",
+        "  if(val != 99) {",
+        "    return \"Not Equal\";",
+        "  }",
+        "  return \"Equal\";",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -2138,21 +2200,44 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d3",
-      "title": "Comparison Operators - Strict Inequality",
+      "title": "Comparison with the Strict Inequality Operator",
       "description": [
-        "!=="
+        "The inequality operator (<code>!==</code>) is the opposite of the strict equality operator.  It means \"Strictly Not Equal\" and returns <code>false</code> where strict equality would return <code>true</code> and <i>vice versa</i>.  Strict inequality will not convert types.",
+        "<strong>Examples</strong><blockquote>3 !== 3   // false<br />3 !== '3' // true<br />4 !== 3   // true</blockquote>",
+        "<h4>Instructions</h4>Add the <code>strict inequality operator</code> to the <code>if</code> statement so the function will return \"Not Equal\" when <code>val</code> is not strictly equal to <code>17</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(myTest(17) === \"Equal\", 'message: <code>myTest(17)</code> should return \"Equal\"');",
+        "assert(myTest(\"17\") === \"Not Equal\", 'message: <code>myTest(\"17\")</code> should return \"Not Equal\"');",
+        "assert(myTest(12) === \"Not Equal\", 'message: <code>myTest(12)</code> should return \"Not Equal\"');",
+        "assert(myTest(\"bob\") === \"Not Equal\", 'message: <code>myTest(\"bob\")</code> should return \"Not Equal\"');",
+        "assert(editor.getValue().match(/val\\s*!==\\s*\\d+/).length > 0, 'message: You should use the <code>!==</code> operator');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "function myTest(val) {",
+        "  // Only Change Code Below this Line",
+        "  ",
+        "  if(val) {",
         "",
+        "  // Only Change Code Above this Line",
         "",
-        ""
+        "    return \"Not Equal\";",
+        "  }",
+        "  return \"Equal\";",
+        "}",
+        "",
+        "// Change this value to test",
+        "myTest(10);"
       ],
       "solutions": [
-        ""
+        "function myTest(val) {",
+        "  if(val != 17) {",
+        "    return \"Not Equal\";",
+        "  }",
+        "  return \"Equal\";",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -2164,21 +2249,48 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d4",
-      "title": "Comparison Operators - Greater Than",
+      "title": "Comparison with the Greater Than Operator",
       "description": [
-        ">"
+        "The greater than operator (<code>&gt;</code>) compares the values of two numbers.  If the number to the left is greater than the number to the right, it returns <code>true</code>. If the number on the left is less than or equal to the number on the right, it returns <code>false</code>.  Like the equality operator, greater than converts data types.",
+        "<strong>Examples</strong><blockquote>  5 > 3   // true<br />  7 > '3' // true<br />  2 > 3   // false<br />'1' > 9   // false</blockquote>",
+        "<h4>Instructions</h4>Add the <code>greater than</code> operator to the indicated lines so that the return statements make sense."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(myTest(0) === \"10 or Under\", 'message: <code>myTest(0)</code> should return \"10 or Under\"');",
+        "assert(myTest(10) === \"10 or Under\", 'message: <code>myTest(10)</code> should return \"10 or Under\"');",
+        "assert(myTest(11) === \"Over 10\", 'message: <code>myTest(11)</code> should return \"Over 10\"');",
+        "assert(myTest(99) === \"Over 10\", 'message: <code>myTest(99)</code> should return \"Over 10\"');",
+        "assert(myTest(100) === \"Over 10\", 'message: <code>myTest(100)</code> should return \"Over 10\"');",
+        "assert(myTest(101) === \"Over 100\", 'message: <code>myTest(101)</code> should return \"Over 100\"');",
+        "assert(myTest(150) === \"Over 100\", 'message: <code>myTest(150)</code> should return \"Over 100\"');\nassert(editor.getValue().match(/val\\s*>\\s*\\d+/).length > 1, 'message: You should use the <code>&gt;</code> operator at least twice');"
       ],
       "challengeSeed": [
+        "function myTest(val) {",
+        "  if(val) {  // Change this line",
+        "    return \"Over 100\";",
+        "  }",
+        "  ",
+        "  if(val) {  // Change this line",
+        "    return \"Over 10\";",
+        "  }",
         "",
+        "  return \"10 or Under\";",
+        "}",
         "",
-        ""
+        "// Change this value to test",
+        "myTest(10);"
       ],
       "solutions": [
-        ""
+        "function myTest(val) {",
+        "  if(val > 100) {  // Change this line",
+        "    return \"Over 100\";",
+        "  }",
+        "  if(val > 10) {  // Change this line",
+        "    return \"Over 10\";",
+        "  }",
+        "  return \"10 or Under\";",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -2190,18 +2302,38 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d5",
-      "title": "Comparison Operators - Greater Than Equal To",
+      "title": "Comparison with the Greater Than Equal To Operator",
       "description": [
-        ">="
+        "The greater than equal to operator (<code>&gt;=</code>) compares the values of two numbers.  If the number to the left is greater than or equal the number to the right, it returns <code>true</code>. If the number on the left is less than the number on the right, it returns <code>false</code>.  Like the equality operator, greater than equal to converts data types.",
+        "<strong>Examples</strong><blockquote>  6 >= 6   // true<br />  7 >= '3' // true<br />  2 >= 3   // false<br />'7' >= 9   // false</blockquote>",
+        "<h4>Instructions</h4>Add the <code>greater than equal to</code> operator to the indicated lines so that the return statements make sense."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(myTest(0) === \"9 or Under\", 'message: <code>myTest(0)</code> should return \"9 or Under\"');",
+        "assert(myTest(9) === \"9 or Under\", 'message: <code>myTest(9)</code> should return \"9 or Under\"');",
+        "assert(myTest(10) === \"10 or Over\", 'message: <code>myTest(10)</code> should return \"10 or Over\"');",
+        "assert(myTest(11) === \"10 or Over\", 'message: <code>myTest(10)</code> should return \"10 or Over\"');",
+        "assert(myTest(19) === \"10 or Over\", 'message: <code>myTest(19)</code> should return \"10 or Over\"');",
+        "assert(myTest(20) === \"20 or Over\", 'message: <code>myTest(100)</code> should return \"20 or Over\"');",
+        "assert(myTest(21) === \"20 or Over\", 'message: <code>myTest(101)</code> should return \"20 or Over\"');",
+        "assert(editor.getValue().match(/val\\s*>=\\s*\\d+/).length > 1, 'message: You should use the <code>&gt;=</code> operator at least twice');"
       ],
       "challengeSeed": [
+        "function myTest(val) {",
+        "  if(val) {  // Change this line",
+        "    return \"20 or Over\";",
+        "  }",
+        "  ",
+        "  if(val) {  // Change this line",
+        "    return \"10 or Over\";",
+        "  }",
         "",
+        "  return \"9 or Under\";",
+        "}",
         "",
-        ""
+        "// Change this value to test",
+        "myTest(10);"
       ],
       "solutions": [
         ""
@@ -2216,7 +2348,7 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d6",
-      "title": "Comparison Operators - Less Than",
+      "title": "Comparison with the Less Than Operator",
       "description": [
         "<"
       ],
@@ -2242,7 +2374,7 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d7",
-      "title": "Comparison Operators - Less Than Equal To",
+      "title": "Comparison with the Less Than Equal To Operator",
       "description": [
         "<="
       ],
@@ -2268,7 +2400,7 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d8",
-      "title": "Comparison Operators - Logical And",
+      "title": "Comparisons with the Logical And Operator",
       "description": [
         "Introduce && Operator"
       ],
@@ -2294,7 +2426,7 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244d9",
-      "title": "Comparison Operators - Logical Or",
+      "title": "Comparisons with the Logical Or Operator",
       "description": [
         "Introduce || Operator"
       ],
