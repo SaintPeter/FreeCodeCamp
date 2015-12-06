@@ -1688,7 +1688,7 @@
         "",
         "",
         "",
-        "if(typeof myFunction !== \"function\") { ",
+        "if (typeof myFunction !== \"function\") { ",
         "  (function() { return \"myFunction is not defined\"; })();",
         "} else {",
         "  capture();",
@@ -2080,12 +2080,12 @@
         "assert(myTest(10) === \"Not Equal\", 'message: <code>myTest(10)</code> should return \"Not Equal\"');",
         "assert(myTest(12) === \"Equal\", 'message: <code>myTest(12)</code> should return \"Equal\"');",
         "assert(myTest(\"12\") === \"Equal\", 'message: <code>myTest(\"12\")</code> should return \"Equal\"');",
-        "assert(editor.getValue().match(/val\\s*==\\s*\\d+/).length > 1, 'message: You should use the <code>==</code> operator');"
+        "assert(editor.getValue().match(/val\\s*==\\s*\\d+/g).length > 0, 'message: You should use the <code>==</code> operator');"
       ],
       "challengeSeed": [
         "// Setup",
         "function myTest(val) {",
-        "  if(val) { // Change this line",
+        "  if (val) { // Change this line",
         "    return \"Equal\";",
         "  }",
         "  return \"Not Equal\";",
@@ -2096,7 +2096,7 @@
       ],
       "solutions": [
         "function myTest(val) {",
-        "  if(val == 12) {",
+        "  if (val == 12) {",
         "    return \"Equal\";",
         "  }",
         "  return \"Not Equal\";",
@@ -2123,12 +2123,12 @@
         "assert(myTest(10) === \"Not Equal\", 'message: <code>myTest(10)</code> should return \"Not Equal\"');",
         "assert(myTest(7) === \"Equal\", 'message: <code>myTest(7)</code> should return \"Equal\"');",
         "assert(myTest(\"7\") === \"Not Equal\", 'message: <code>myTest(\"7\")</code> should return \"Not Equal\"');",
-        "assert(editor.getValue().match(/val\\s*===\\s*\\d+/).length > 1, 'message: You should use the <code>===</code> operator');"
+        "assert(editor.getValue().match(/val\\s*===\\s*\\d+/g).length > 0, 'message: You should use the <code>===</code> operator');"
       ],
       "challengeSeed": [
         "// Setup",
         "function myTest(val) {",
-        "  if(val) { // Change this line",
+        "  if (val) { // Change this line",
         "    return \"Equal\";",
         "  }",
         "  return \"Not Equal\";",
@@ -2139,7 +2139,7 @@
       ],
       "solutions": [
         "function myTest(val) {",
-        "  if(val == 7) {",
+        "  if (val == 7) {",
         "    return \"Equal\";",
         "  }",
         "  return \"Not Equal\";",
@@ -2168,12 +2168,12 @@
         "assert(myTest(12) === \"Not Equal\", 'message: <code>myTest(12)</code> should return \"Not Equal\"');",
         "assert(myTest(\"12\") === \"Not Equal\", 'message: <code>myTest(\"12\")</code> should return \"Not Equal\"');",
         "assert(myTest(\"bob\") === \"Not Equal\", 'message: <code>myTest(\"bob\")</code> should return \"Not Equal\"');",
-        "assert(editor.getValue().match(/val\\s*!=\\s*\\d+/).length > 0, 'message: You should use the <code>!=</code> operator');"
+        "assert(editor.getValue().match(/val\\s*!=\\s*\\d+/g).length > 0, 'message: You should use the <code>!=</code> operator');"
       ],
       "challengeSeed": [
         "// Setup",
         "function myTest(val) {",
-        "  if(val) { // Change this line",
+        "  if (val) { // Change this line",
         "    return \"Not Equal\";",
         "  }",
         "  return \"Equal\";",
@@ -2184,7 +2184,7 @@
       ],
       "solutions": [
         "function myTest(val) {",
-        "  if(val != 99) {",
+        "  if (val != 99) {",
         "    return \"Not Equal\";",
         "  }",
         "  return \"Equal\";",
@@ -2212,14 +2212,14 @@
         "assert(myTest(\"17\") === \"Not Equal\", 'message: <code>myTest(\"17\")</code> should return \"Not Equal\"');",
         "assert(myTest(12) === \"Not Equal\", 'message: <code>myTest(12)</code> should return \"Not Equal\"');",
         "assert(myTest(\"bob\") === \"Not Equal\", 'message: <code>myTest(\"bob\")</code> should return \"Not Equal\"');",
-        "assert(editor.getValue().match(/val\\s*!==\\s*\\d+/).length > 0, 'message: You should use the <code>!==</code> operator');"
+        "assert(editor.getValue().match(/val\\s*!==\\s*\\d+/g).length > 0, 'message: You should use the <code>!==</code> operator');"
       ],
       "challengeSeed": [
         "// Setup",
         "function myTest(val) {",
         "  // Only Change Code Below this Line",
         "  ",
-        "  if(val) {",
+        "  if (val) {",
         "",
         "  // Only Change Code Above this Line",
         "",
@@ -2233,7 +2233,7 @@
       ],
       "solutions": [
         "function myTest(val) {",
-        "  if(val != 17) {",
+        "  if (val != 17) {",
         "    return \"Not Equal\";",
         "  }",
         "  return \"Equal\";",
@@ -2263,15 +2263,15 @@
         "assert(myTest(99) === \"Over 10\", 'message: <code>myTest(99)</code> should return \"Over 10\"');",
         "assert(myTest(100) === \"Over 10\", 'message: <code>myTest(100)</code> should return \"Over 10\"');",
         "assert(myTest(101) === \"Over 100\", 'message: <code>myTest(101)</code> should return \"Over 100\"');",
-        "assert(myTest(150) === \"Over 100\", 'message: <code>myTest(150)</code> should return \"Over 100\"');\nassert(editor.getValue().match(/val\\s*>\\s*\\d+/).length > 1, 'message: You should use the <code>&gt;</code> operator at least twice');"
+        "assert(myTest(150) === \"Over 100\", 'message: <code>myTest(150)</code> should return \"Over 100\"');\nassert(editor.getValue().match(/val\\s*>\\s*\\d+/g).length > 1, 'message: You should use the <code>&gt;</code> operator at least twice');"
       ],
       "challengeSeed": [
         "function myTest(val) {",
-        "  if(val) {  // Change this line",
+        "  if (val) {  // Change this line",
         "    return \"Over 100\";",
         "  }",
         "  ",
-        "  if(val) {  // Change this line",
+        "  if (val) {  // Change this line",
         "    return \"Over 10\";",
         "  }",
         "",
@@ -2283,10 +2283,10 @@
       ],
       "solutions": [
         "function myTest(val) {",
-        "  if(val > 100) {  // Change this line",
+        "  if (val > 100) {  // Change this line",
         "    return \"Over 100\";",
         "  }",
-        "  if(val > 10) {  // Change this line",
+        "  if (val > 10) {  // Change this line",
         "    return \"Over 10\";",
         "  }",
         "  return \"10 or Under\";",
@@ -2317,15 +2317,15 @@
         "assert(myTest(19) === \"10 or Over\", 'message: <code>myTest(19)</code> should return \"10 or Over\"');",
         "assert(myTest(20) === \"20 or Over\", 'message: <code>myTest(100)</code> should return \"20 or Over\"');",
         "assert(myTest(21) === \"20 or Over\", 'message: <code>myTest(101)</code> should return \"20 or Over\"');",
-        "assert(editor.getValue().match(/val\\s*>=\\s*\\d+/).length > 1, 'message: You should use the <code>&gt;=</code> operator at least twice');"
+        "assert(editor.getValue().match(/val\\s*>=\\s*\\d+/g).length > 1, 'message: You should use the <code>&gt;=</code> operator at least twice');"
       ],
       "challengeSeed": [
         "function myTest(val) {",
-        "  if(val) {  // Change this line",
+        "  if (val) {  // Change this line",
         "    return \"20 or Over\";",
         "  }",
         "  ",
-        "  if(val) {  // Change this line",
+        "  if (val) {  // Change this line",
         "    return \"10 or Over\";",
         "  }",
         "",
@@ -2350,16 +2350,35 @@
       "id": "56533eb9ac21ba0edf2244d6",
       "title": "Comparison with the Less Than Operator",
       "description": [
-        "<"
+        "The <code>less than</code> operator (<code>&lt;</code>) compares the values of two numbers.  If the number to the left is less than the number to the right, it returns <code>true</code>. If the number on the left is greater than or equal to the number on the right, it returns <code>false</code>.  Like the equality operator, <code>less than</code> converts data types.",
+        "<strong>Examples</strong><blockquote>  2 &lt; 5  // true<br />'3' &lt; 7  // true<br />  5 &lt; 5  // false<br />  3 &lt; 2  // false<br />'8' &lt; 4  // false</blockquote>",
+        "<h4>Instructions</h4>Add the <code>less than</code> operator to the indicated lines so that the return statements make sense."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(myTest(0) === \"Under 25\", 'message: <code>myTest(0)</code> should return \"Under 25\"');",
+        "assert(myTest(24) === \"Under 25\", 'message: <code>myTest(24)</code> should return \"Under 25\"');",
+        "assert(myTest(25) === \"Under 55\", 'message: <code>myTest(25)</code> should return \"Under 55\"');",
+        "assert(myTest(54) === \"Under 55\", 'message: <code>myTest(54)</code> should return \"Under 55\"');",
+        "assert(myTest(55) === \"55 or Over\", 'message: <code>myTest(55)</code> should return \"55 or Over\"');",
+        "assert(myTest(99) === \"55 or Over\", 'message: <code>myTest(99)</code> should return \"55 or Over\"');",
+        "assert(editor.getValue().match(/val\\s*<\\s*\\d+/g).length > 1, 'message: You should use the <code>&lt;</code> operator at least twice');"
       ],
       "challengeSeed": [
+        "function myTest(val) {",
+        "  if (val) {  // Change this line",
+        "    return \"Under 25\";",
+        "  }",
+        "  ",
+        "  if (val) {  // Change this line",
+        "    return \"Under 55\";",
+        "  }",
         "",
+        "  return \"55 or Over\";",
+        "}",
         "",
-        ""
+        "// Change this value to test",
+        "myTest(10);"
       ],
       "solutions": [
         ""
@@ -2376,15 +2395,35 @@
       "id": "56533eb9ac21ba0edf2244d7",
       "title": "Comparison with the Less Than Equal To Operator",
       "description": [
-        "<="
+        "The <code>less than equal to</code> operator (<code>&lt;=</code>) compares the values of two numbers.  If the number to the left is less than or equl the number to the right, it returns <code>true</code>. If the number on the left is greater than the number on the right, it returns <code>false</code>.  Like the equality operator, <code>less than equal to</code> converts data types.",
+        "<strong>Examples</strong><blockquote>  4 &lt;= 5  // true<br />'7' &lt;= 7  // true<br />  5 &lt;= 5  // true<br />  3 &lt;= 2  // false<br />'8' &lt;= 4  // false</blockquote>",
+        "<h4>Instructions</h4>Add the <code>less than equal to</code> operator to the indicated lines so that the return statements make sense."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(myTest(0) === \"Smaller Than 12\", 'message: <code>myTest(0)</code> should return \"Smaller Than 12\"');",
+        "assert(myTest(11) === \"Smaller Than 12\", 'message: <code>myTest(11)</code> should return \"Smaller Than 12\"');",
+        "assert(myTest(12) === \"Smaller Than 24\", 'message: <code>myTest(12)</code> should return \"Smaller Than 24\"');",
+        "assert(myTest(23) === \"Smaller Than 24\", 'message: <code>myTest(23)</code> should return \"Smaller Than 24\"');",
+        "assert(myTest(24) === \"25 or More\", 'message: <code>myTest(24)</code> should return \"24 or More\"');",
+        "assert(myTest(55) === \"25 or More\", 'message: <code>myTest(55)</code> should return \"24 or More\"');",
+        "assert(editor.getValue().match(/val\\s*<=\\s*\\d+/g).length > 1, 'message: You should use the <code>&lt;=</code> operator at least twice');"
       ],
       "challengeSeed": [
+        "function myTest(val) {",
+        "  if (val) {  // Change this line",
+        "    return \"Smaller Than 12\";",
+        "  }",
+        "  ",
+        "  if (val) {  // Change this line",
+        "    return \"Smaller Than 24\";",
+        "  }",
         "",
+        "  return \"25 or More\";",
+        "}",
         "",
+        "// Change this value to test",
+        "myTest(10);",
         ""
       ],
       "solutions": [
@@ -2402,19 +2441,48 @@
       "id": "56533eb9ac21ba0edf2244d8",
       "title": "Comparisons with the Logical And Operator",
       "description": [
-        "Introduce && Operator"
+        "Sometimes you will need to test more than one thing at a time.  The <dfn>logical and</dfn> operator (<code>&&</code>) returns <code>true</code> if and only if the <dfn>operands</dfn> to the left and right of it are true.",
+        "The same effect could be achieved by nesting an if statement inside another if:",
+        "<blockquote>if (num < 10) { <br />  if (num > 5) {<br />    return \"Yes\";<br />  }<br />}<br />return \"No\";</blockquote>Will only return \"Yes\" if <code>num</code> is between <code>6</code> and <code>9</code>.  The same logic can be written as:<blockquote>if (num < 10 && num > 5) {<br />  return \"Yes\";<br />}</br>return \"No\";</blockquote>",
+        "<h4>Instructions</h4>Combine the two if statements into one statement which returns <code>\"Yes\"</code> if <code>val</code> is less than or equal to <code>50</code> and greater than or equal to <code>25</code>.  Otherwise, return <code>\"No\"</code>."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(editor.getValue().match(/&&/g).length === 1, 'message: You should use the <code>&&</code> operator once');",
+        "assert(editor.getValue().match(/if/g).length === 1, 'message: You should only have one <code>if</code> statement');",
+        "assert(myTest(0) === \"No\", 'message: <code>myTest(0)</code> should return \"No\"');",
+        "assert(myTest(24) === \"No\", 'message: <code>myTest(24)</code> should return \"No\"');",
+        "assert(myTest(25) === \"Yes\", 'message: <code>myTest(25)</code> should return \"Yes\"');",
+        "assert(myTest(49) === \"Yes\", 'message: <code>myTest(30)</code> should return \"Yes\"');",
+        "assert(myTest(50) === \"Yes\", 'message: <code>myTest(50)</code> should return \"Yes\"');",
+        "assert(myTest(51) === \"No\", 'message: <code>myTest(51)</code> should return \"No\"');",
+        "assert(myTest(75) === \"No\", 'message: <code>myTest(75)</code> should return \"No\"');",
+        "assert(myTest(51) === \"No\", 'message: <code>myTest(51)</code> should return \"No\"');"
       ],
       "challengeSeed": [
+        "function myTest(val) {",
+        "  // Only change code below this line",
         "",
+        "  if (val) {",
+        "     if (val) {",
+        "       return \"Yes\";",
+        "\t }",
+        "  }",
         "",
-        ""
+        "  // Only change code above this line",
+        "  return \"No\";",
+        "}",
+        "",
+        "// Change this value to test",
+        "myTest(10);"
       ],
       "solutions": [
-        ""
+        "function myTest(val) {",
+        "  if (val >= 25 && val <= 50) {",
+        "    return \"Yes\";",
+        "  }",
+        "  return \"No\";",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -3118,7 +3186,7 @@
         "",
         "// Only change code above this line.",
         "",
-        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}",
+        "if (typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}",
         ""
       ],
       "type": "waypoint",
