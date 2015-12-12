@@ -3069,7 +3069,7 @@
       "description": [
         "In the casino game Blackjack, a player can gain an advantage over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called <a href=\"https://en.wikipedia.org/wiki/Card_counting\">Card Counting</a>.  ",
         "Having more high cards remaining in the deck favors the player.  Each card is assigned a value according to the table below.   When the count is positive, the player should bet high.  When the count is zero or negative, the player should bet low.",
-        "<table class=\"table table-striped\"><thead><tr><th>Value</th><th>Cards</th></tr></thead><tbody><tr><td>-1</td><td>2, 3, 4, 5, 6</td></tr><tr><td>0</td><td>7, 8, 9</td></tr><tr><td>+1</td><td>10, 'J', 'Q', 'K','A'</td></tr></tbody></table>",
+        "<table class=\"table table-striped\"><thead><tr><th>Value</th><th>Cards</th></tr></thead><tbody><tr><td>+1</td><td>2, 3, 4, 5, 6</td></tr><tr><td>0</td><td>7, 8, 9</td></tr><tr><td>-1</td><td>10, 'J', 'Q', 'K','A'</td></tr></tbody></table>",
         "You will write a card counting function.  It will recieve a <code>card</code> parameter and increment or decrement the global <code>count</code> variable according to the card's value (see table).  The function will then return the current count and the string <code>\"Bet\"</code> if the count if positive, or <code>\"Hold\"</code> if the count is zero or negative.",
         "<strong>Example Output</strong>",
         "<code>-3 Hold</code><br /><code>5 Bet</code>"
@@ -3180,25 +3180,42 @@
       "description": [
         "There are two ways to access the properties of an object: the dot operator (<code>.</code>) and bracket notation (<code>[]</code>), similar to an array.",
         "The dot operator is what you use when you know the name of the property you're trying to access ahead of time.",
-        "Here is a sample of using the <code>.</code> to read and write an object property:",
-        "<blockquote>var myObj = {<br />             prop1: \"val1\",<br />             prop2: \"val2\"<br />            };<br />myObj.prop1; // val1<br />myObj.prop2 = \"Bob\";</blockquote>",
-        "New properties can be added at any time:",
-        "<code>myObj.newProp = \"someValue\";</code>"
+        "Here is a sample of using the <code>.</code> to read an object property:",
+        "<blockquote>var myObj = {<br />  prop1: \"val1\",<br />  prop2: \"val2\"<br />};<br />myObj.prop1; // val1<br />myObj.prop2; // val2</blockquote>",
+        "<h4>Instructions</h4>Read the values of the properties <code>hat</code> and <code>shirt</code> of <code>testObj</code> using dot notation."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(typeof hatValue === 'string' , 'message: <code>hatValue</code> should be a string');",
+        "assert(hatValue === 'ballcap' , 'message: The value of <code>hatValue</code> should be <code>\"ballcap\"</code>');",
+        "assert(typeof shirtValue === 'string' , 'message: <code>shirtValue</code> should be a string');",
+        "assert(shirtValue === 'jersey' , 'message: The value of <code>shirtValue</code> should be <code>\"jersey\"</code>');\nassert(editor.getValue().match(/testObj\\.\\w+/g).length > 1, 'message: You should use dot notation twice');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "var testObj = {",
+        "  \"hat\": \"ballcap\",",
+        "  \"shirt\": \"jersey\",",
+        "  \"shoes\": \"cleats\"",
+        "};",
         "",
+        "// Only change code below this line",
         "",
-        ""
+        "var hatValue = testObj;      // Change this line",
+        "var shirtValue = testObj;    // Change this line"
       ],
       "tail": [
-        ""
+        "(function(a,b) { return \"hatValue = '\" + a + \"', shirtValue = '\" + b + \"'\"; })(hatValue,shirtValue);"
       ],
       "solutions": [
-        ""
+        "var testObj = {",
+        "  \"hat\": \"ballcap\",",
+        "  \"shirt\": \"jersey\",",
+        "  \"shoes\": \"cleats\"",
+        "};",
+        "",
+        "var hatValue = testObj.hat;  ",
+        "var shirtValue = testObj.shirt;"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -3212,19 +3229,44 @@
       "id": "56533eb9ac21ba0edf2244c8",
       "title": "Accessing Objects Properties with Bracket Notation",
       "description": [
-        "Show obj['property']"
+        "The second way to access the properties of an objectis bracket notation (<code>[]</code>).  If the property of the object you are trying to access has a space in it, you will need to use bracket notation.",
+        "Here is a sample of using bracket notation to read an object property:",
+        "<blockquote>var myObj = {<br />  \"Space Name\": \"Kirk\",<br />  \"More Space\": \"Spock\"<br />  };<br />myObj[\"Space Name\"]; // Kirk<br />myObj['More Space']; // Spock</blockquote>",
+        "Note that property names with spaces in them must be in quotes (single or double).",
+        "<h4>Instructions</h4>Read the values of the properties <code>\"an entree\"</code> and <code>\"the drink\"</code> of <code>testObj</code> using bracket notation."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(typeof entreeValue === 'string' , 'message: <code>entreeValue</code> should be a string');",
+        "assert(entreeValue === 'hamburger' , 'message: The value of <code>entreeValue</code> should be <code>\"hamburger\"</code>');",
+        "assert(typeof drinkValue === 'string' , 'message: <code>drinkValue</code> should be a string');",
+        "assert(drinkValue === 'water' , 'message: The value of <code>drinkValue</code> should be <code>\"water\"</code>');",
+        "assert(editor.getValue().match(/testObj\\[('|\")[^'\"]+\\1\\]/g).length > 1, 'message: You should use bracket notation twice');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "var testObj = {",
+        "  \"an entree\": \"hamburger\",",
+        "  \"my side\": \"veggies\",",
+        "  \"the drink\": \"water\"",
+        "};",
         "",
+        "// Only change code below this line",
         "",
-        ""
+        "var entreeValue = testObj;   // Change this line",
+        "var drinkValue = testObj;    // Change this line"
+      ],
+      "tail": [
+        "(function(a,b) { return \"entreeValue = '\" + a + \"', shirtValue = '\" + b + \"'\"; })(entreeValue,drinkValue);"
       ],
       "solutions": [
-        ""
+        "var testObj = {",
+        "  \"an entree\": \"hamburger\",",
+        "  \"my side\": \"veggies\",",
+        "  \"the drink\": \"water\"",
+        "};",
+        "var entreeValue = testObj[\"an entree\"];",
+        "var drinkValue = testObj['the drink'];"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -3238,15 +3280,33 @@
       "id": "56533eb9ac21ba0edf2244c9",
       "title": "Accessing Objects Properties with Variables",
       "description": [
-        "Show obj[propertyVariable]"
+        "Another use of bracket notation on objects is to use a variable to access a property. This can be very useful for itterating through lists of object properties or for doing lookups.",
+        "Here is an example of using a variable to access a property:",
+        "<blockquote>var someProp = \"propName\";<br />var myObj = {<br />  propName: \"Some Value\"<br >}<br />myObj[someProp]; // \"Some Value\"</blockquote>",
+        "Note that we  do <em>not</em> use quotes around the variable name when using it to access the property because we are using the <em>value</em> of the variable, not the <em>name</em>",
+        "<h4>Instructions</h4>Use the <code>playerNumber</code> variable to lookup player <code>16</code> in <code>testObj</code> using bracket notation."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(typeof playerNumber === 'number', 'message: <code>playerNumber</code> should be a number');",
+        "assert(typeof player === 'string', 'message: The variable <code>player</code> should be a string');",
+        "assert(player === 'Montana', 'message: The value of <code>player</code> should be \"Montana\"');",
+        "assert(/testObj\\[\\s*playerNumber\\s*\\]/.test(editor.getValue()),'message: You should use bracket notation to access <code>testObj</code>');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "var testObj = {",
+        "  12: \"Namath\",",
+        "  16: \"Montana\",",
+        "  19: \"Unitas\"",
+        "};",
         "",
+        "// Only change code below this line;",
         "",
+        "var playerNumber;       // Change this Line",
+        "var player = testObj;   // Change this Line"
+      ],
+      "tail": [
         ""
       ],
       "solutions": [
