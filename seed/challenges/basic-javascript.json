@@ -3322,26 +3322,22 @@
     },
     {
       "id": "bg9999c9c99feddfaeb9bdef",
-      "title": "Deleting Object Properties",
+      "title": "Updating Object Properties",
       "description": [
-        "REWRITE:  Just Delete Object Properties",
-        "After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable.",
+        "After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable.  You can use either dot or bracket notation to update.",
         "For example, let's look at <code>ourDog</code>:",
-        "<code>var ourDog = {</code>",
-        "<code>&nbsp;&nbsp;\"name\": \"Camper\",</code>",
-        "<code>&nbsp;&nbsp;\"legs\": 4,</code>",
-        "<code>&nbsp;&nbsp;\"tails\": 1,</code>",
-        "<code>&nbsp;&nbsp;\"friends\": [\"everything!\"]</code>",
-        "<code>};</code>",
+        "<blockquote>var ourDog = {<br />  \"name\": \"Camper\",<br />  \"legs\": 4,<br />  \"tails\": 1,<br />  \"friends\": [\"everything!\"]<br />};</blockquote>",
         "Since he's a particularly happy dog, let's change his name to \"Happy Camper\". Here's how we update his object's name property:",
-        "<code>ourDog.name = \"Happy Camper\";</code>",
-        "Now when we run <code>return ourDog.name</code>, instead of getting \"Camper\", we'll get his new name, \"Happy Camper\".",
-        "Let's update the <code>myDog</code> object's name property. Let's change her name from \"Coder\" to \"Happy Coder\"."
+        "<code>ourDog.name = \"Happy Camper\";</code> or",
+        "<code>outDog[\"name\"] = \"Happy Camper\";",
+        "Now when we evaluate <code>ourDog.name</code>, instead of getting \"Camper\", we'll get his new name, \"Happy Camper\".",
+        "<h4>Instructions</h4>Let's update the <code>myDog</code> object's name property. Let's change her name from \"Coder\" to \"Happy Coder\".  You can use either dot or bracket notation."
       ],
       "tests": [
         "assert(/happy coder/gi.test(myDog.name), 'message: Update <code>myDog</code>&apos;s <code>\"name\"</code> property to equal \"Happy Coder\".');"
       ],
       "challengeSeed": [
+        "// Example",
         "var ourDog = {",
         "  \"name\": \"Camper\",",
         "  \"legs\": 4,",
@@ -3351,6 +3347,7 @@
         "",
         "ourDog.name = \"Happy Camper\";",
         "",
+        "// Setup",
         "var myDog = {",
         "  \"name\": \"Coder\",",
         "  \"legs\": 4,",
@@ -3360,10 +3357,9 @@
         "",
         "// Only change code below this line.",
         "",
-        "",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(z){return z;})(myDog);"
       ],
       "type": "waypoint",
