@@ -3329,12 +3329,13 @@
         "<blockquote>var ourDog = {<br />  \"name\": \"Camper\",<br />  \"legs\": 4,<br />  \"tails\": 1,<br />  \"friends\": [\"everything!\"]<br />};</blockquote>",
         "Since he's a particularly happy dog, let's change his name to \"Happy Camper\". Here's how we update his object's name property:",
         "<code>ourDog.name = \"Happy Camper\";</code> or",
-        "<code>outDog[\"name\"] = \"Happy Camper\";",
+        "<code>outDog[\"name\"] = \"Happy Camper\";</code>",
         "Now when we evaluate <code>ourDog.name</code>, instead of getting \"Camper\", we'll get his new name, \"Happy Camper\".",
-        "<h4>Instructions</h4>Let's update the <code>myDog</code> object's name property. Let's change her name from \"Coder\" to \"Happy Coder\".  You can use either dot or bracket notation."
+        "<h4>Instructions</h4>Update the <code>myDog</code> object's name property. Let's change her name from \"Coder\" to \"Happy Coder\".  You can use either dot or bracket notation."
       ],
       "tests": [
-        "assert(/happy coder/gi.test(myDog.name), 'message: Update <code>myDog</code>&apos;s <code>\"name\"</code> property to equal \"Happy Coder\".');"
+        "assert(/happy coder/gi.test(myDog.name), 'message: Update <code>myDog</code>&apos;s <code>\"name\"</code> property to equal \"Happy Coder\".');",
+        "assert(/\"name\": \"Coder\"/.test(editor.getValue()), 'message: Do not edit the <code>myDog</code> definition');"
       ],
       "challengeSeed": [
         "// Example",
@@ -3369,16 +3370,20 @@
       "id": "bg9999c9c99feedfaeb9bdef",
       "title": "Add New Properties to a JavaScript Object",
       "description": [
-        "You can add new properties to existing JavaScript objects the same way you would modify them.",
+        "You can add new properties to existing JavaScript objects the same way you would modify them.  ",
         "Here's how we would add a <code>\"bark\"</code> property to <code>ourDog</code>:",
-        "<code>ourDog.bark = \"bow-wow\";</code>",
-        "Now when we run <code>return ourDog.bark</code>, we'll get his bark, \"bow-wow\".",
-        "Let's add a <code>\"bark\"</code> property to <code>myDog</code> and set it to a dog sound, such as \"woof\"."
+        "<code>ourDog.bark = \"bow-wow\";</code> ",
+        "or",
+        "<code>ourDog[\"bark\"] = \"bow-wow\";</code>",
+        "Now when we evaluate <code>ourDog.bark</code>, we'll get his bark, \"bow-wow\".",
+        "<h4>Instructions</h4>Add a <code>\"bark\"</code> property to <code>myDog</code> and set it to a dog sound, such as \"woof\". You may use either dot or bracket notation."
       ],
       "tests": [
-        "assert(myDog.bark !== undefined, 'message: Add the property <code>\"bark\"</code> to <code>myDog</code>.');"
+        "assert(myDog.bark !== undefined, 'message: Add the property <code>\"bark\"</code> to <code>myDog</code>.');",
+        "assert(!/bark[^\\n]:/.test(editor.getValue()), 'message: Do not add <code>\"bark\"</code> to the setup section');"
       ],
       "challengeSeed": [
+        "// Example",
         "var ourDog = {",
         "  \"name\": \"Camper\",",
         "  \"legs\": 4,",
@@ -3388,6 +3393,7 @@
         "",
         "ourDog.bark = \"bow-wow\";",
         "",
+        "// Setup",
         "var myDog = {",
         "  \"name\": \"Happy Coder\",",
         "  \"legs\": 4,",
@@ -3396,12 +3402,19 @@
         "};",
         "",
         "// Only change code below this line.",
-        "",
-        "",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(z){return z;})(myDog);"
+      ],
+      "solutions": [
+        "var myDog = {",
+        "  \"name\": \"Happy Coder\",",
+        "  \"legs\": 4,",
+        "  \"tails\": 1,",
+        "  \"friends\": [\"Free Code Camp Campers\"]",
+        "};",
+        "myDog.bark = \"Woof Woof\";"
       ],
       "type": "waypoint",
       "challengeType": "1"
@@ -3412,12 +3425,14 @@
       "description": [
         "We can also delete properties from objects like this:",
         "<code>delete ourDog.bark;</code>",
-        "Let's delete the <code>\"tails\"</code> property from <code>myDog</code>."
+        "<h4>Instructions</h4>Delete the <code>\"tails\"</code> property from <code>myDog</code>. You may use either dot or bracket notation."
       ],
       "tests": [
-        "assert(myDog.tails === undefined, 'message: Delete the property <code>\"tails\"</code> from <code>myDog</code>.');"
+        "assert(myDog.tails === undefined, 'message: Delete the property <code>\"tails\"</code> from <code>myDog</code>.');",
+        "assert(editor.getValue().match(/\"tails\": 1/g).length > 1, 'message: Do not modify the <code>myDog</code> setup');"
       ],
       "challengeSeed": [
+        "// Example",
         "var ourDog = {",
         "  \"name\": \"Camper\",",
         "  \"legs\": 4,",
@@ -3428,6 +3443,7 @@
         "",
         "delete ourDog.bark;",
         "",
+        "// Setup",
         "var myDog = {",
         "  \"name\": \"Happy Coder\",",
         "  \"legs\": 4,",
@@ -3438,11 +3454,21 @@
         "",
         "// Only change code below this line.",
         "",
-        "",
-        "",
-        "// Only change code above this line.",
-        "",
+        ""
+      ],
+      "tail": [
         "(function(z){return z;})(myDog);"
+      ],
+      "solutions": [
+        "// Setup",
+        "var myDog = {",
+        "  \"name\": \"Happy Coder\",",
+        "  \"legs\": 4,",
+        "  \"tails\": 1,",
+        "  \"friends\": [\"Free Code Camp Campers\"],",
+        "  \"bark\": \"woof\"",
+        "};",
+        "delete myDog.tails;"
       ],
       "type": "waypoint",
       "challengeType": "1"
@@ -3451,19 +3477,90 @@
       "id": "56533eb9ac21ba0edf2244ca",
       "title": "Using Objects for Lookups",
       "description": [
-        ""
+        "Objects can be thought of as a key/value storage, like a dictonary. If you have tabular data, you can use an object to \"lookup\" values rather than a <code>switch</code> statement or an <code>if...else</code> chain. This is most useful when you know that your input data is limited to a certain range.",
+        "Here is an example of a simple reverse alphabet lookup:",
+        "<blockquote>var alpha = {<br />  1:\"Z\"<br />  2:\"Y\"<br />  3:\"X\"<br />...<br />  4:\"W\"<br />  24:\"C\"<br />  25:\"B\"<br />  26:\"A\"<br />};<br />alpha[2]; // \"Y\"<br />alpha[24]; // \"C\"</blockquote>",
+        "<h4>Instructions</h4>Convert the switch statement into a lookup table called <code>lookup</code>.  Use it to lookup <code>val</code> and return the associated string."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(numberLookup(0) === 'zero', 'message: <code>numberLookup(0)</code> should equal <code>\"zero\"</code>');",
+        "assert(numberLookup(1) === 'one', 'message: <code>numberLookup(1)</code> should equal <code>\"one\"</code>');",
+        "assert(numberLookup(2) === 'two', 'message: <code>numberLookup(2)</code> should equal <code>\"two\"</code>');",
+        "assert(numberLookup(3) === 'three', 'message: <code>numberLookup(3)</code> should equal <code>\"three\"</code>');",
+        "assert(numberLookup(4) === 'four', 'message: <code>numberLookup(4)</code> should equal <code>\"four\"</code>');",
+        "assert(numberLookup(5) === 'five', 'message: <code>numberLookup(5)</code> should equal <code>\"five\"</code>');",
+        "assert(numberLookup(6) === 'six', 'message: <code>numberLookup(6)</code> should equal <code>\"six\"</code>');",
+        "assert(numberLookup(7) === 'seven', 'message: <code>numberLookup(7)</code> should equal <code>\"seven\"</code>');",
+        "assert(numberLookup(8) === 'eight', 'message: <code>numberLookup(8)</code> should equal <code>\"eight\"</code>');",
+        "assert(numberLookup(9) === 'nine', 'message: <code>numberLookup(9)</code> should equal <code>\"nine\"</code>');",
+        "assert(!/case|switch|if/g.test(editor.getValue()), 'message: You should not use <code>case</code>, <code>switch</code>, or <code>if</code> statements');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "function numberLookup(val) {",
+        "  var result = \"\";",
         "",
+        "  // Only change code below this line",
+        "  switch(val) {",
+        "    case 0: ",
+        "      result = \"zero\";",
+        "      break;",
+        "    case 1: ",
+        "      result = \"one\";",
+        "      break;",
+        "    case 2: ",
+        "      result = \"two\";",
+        "      break;",
+        "    case 3: ",
+        "      result = \"three\";",
+        "      break;",
+        "    case 4: ",
+        "      result = \"four\";",
+        "      break;",
+        "    case 5: ",
+        "      result = \"five\";",
+        "      break;",
+        "    case 6: ",
+        "      result = \"six\";",
+        "      break;",
+        "    case 7: ",
+        "      result = \"seven\";",
+        "      break;",
+        "    case 8: ",
+        "      result = \"eight\";",
+        "      break;",
+        "    case 9: ",
+        "      result = \"nine\";",
+        "      break;",
+        "  }",
+        "",
+        "  // Only change code above this line",
+        "  return result;",
+        "}",
         "",
         ""
       ],
       "solutions": [
-        ""
+        "function numberLookup(val) {",
+        "  var result = \"\";",
+        "",
+        "  var lookup = {",
+        "    0:\"zero\",",
+        "    1:\"one\",",
+        "    2:\"two\",",
+        "    3:\"three\",",
+        "    4:\"four\",",
+        "    5:\"five\",",
+        "    6:\"six\",",
+        "    7:\"seven\",",
+        "    8:\"eight\",",
+        "    9:\"nine\"",
+        "  };",
+        "  result = lookup[val];",
+        "",
+        " return result;",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
