@@ -172,7 +172,7 @@ gulp.task('sync', syncDepenedents, function() {
     proxy: 'http://localhost:3000',
     logLeval: 'debug',
     files: paths.syncWatch,
-    port: 3001,
+    port: 4001,
     open: false,
     reloadDelay: reloadDelay
   });

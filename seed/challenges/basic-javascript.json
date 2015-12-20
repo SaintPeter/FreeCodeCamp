@@ -4016,9 +4016,19 @@
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(total !== 'undefined', 'message: <code>total</code> should be defined');",
+        "assert(total === 20, 'message: <code>total</code> should equal 20');",
+        "assert(!/20/.test(editor.getValue()), 'message: Do not set <code>total</code> to 20 directly');"
       ],
       "challengeSeed": [
+        "// Example",
+        "var ourArr = [ 9, 10, 11, 12];",
+        "var ourTotal = 0;",
+        "",
+        "for (var i = 0; i < ourArr.length; i++) {",
+        "  ourTotal += ourArr[i];",
+        "}",
+        "",
         "// Setup",
         "var myArr = [ 2, 3, 4, 5, 6];",
         "",
@@ -4027,10 +4037,15 @@
         ""
       ],
       "tail": [
-        ""
+        "(function(t) { if(typeof t !== 'undefined') { return \"Total = \" + t; } else { return \"Total is undefined\";}})(total);"
       ],
       "solutions": [
-        ""
+        "var myArr = [ 2, 3, 4, 5, 6];",
+        "var total = 0;",
+        "",
+        "for (var i = 0; i < myArr.length; i++) {",
+        "  total += myArr[i];",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -4044,7 +4059,9 @@
       "id": "56533eb9ac21ba0edf2244e1",
       "title": "Nesting For Loops",
       "description": [
-        "Show a for loop inside a for loop"
+        "If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays.  Here is an example:",
+        "<blockquote>var arr = [<br />  [1,2], [3,4], [5,6]<br />];<br />for (var i=0; i &lt; arr.length; i++) {<br />  for (var j=0; k &lt; arr[i].length; j++) {<br />    console.log(arr[i][j]);<br />  }<br />}</blockquote>",
+        "This outputs each sub-element in <code>arr</code> one at a time.  Note that for the inner loop we are checking the <code>.length</code> of <code>arr[i]</code>, since <code>arr[i]</code> is itself an array."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
