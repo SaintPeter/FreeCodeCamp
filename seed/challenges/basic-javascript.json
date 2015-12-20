@@ -40,7 +40,7 @@
         "",
         "// Only change code below this line.",
         "",
-        "  return false;",
+        "  return false; // Change this line",
         "",
         "// Only change code above this line.",
         "}"
@@ -104,7 +104,7 @@
         "var a;",
         "var b = 2;",
         "",
-        "// Only add code below this line",
+        "// Only change code below this line",
         " "
       ],
       "tail": [
@@ -743,24 +743,49 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244b3",
-      "title": "Checkpoint: Variables and Assignement",
+      "title": "Convert Celsius to Fahrenheit",
       "description": [
-        "TBD"
+        "To test your learning you will create a solution \"from scratch\".  Place your code between the indicated lines and it will be tested against multiple test cases.",
+        "The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.",
+        "You are given a variable <code>Tc</code> representing a temperature in Celsius.  Create a variable <code>Tf</code> and apply the algorithm to assign it the corrasponding temperature in Fahrenheit."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(typeof convert(0) === 'number', 'message: <code>convert(0)</code> should return a number');",
+        "assert(convert(-30) === -22, 'message: <code>convert(-30)</code> should return a value of <code>-22</code>');",
+        "assert(convert(-10) === 14, 'message: <code>convert(-10)</code> should return a value of <code>14</code>');",
+        "assert(convert(0) === 32, 'message: <code>convert(0)</code> should return a value of <code>32</code>');",
+        "assert(convert(20) === 68, 'message: <code>convert(20)</code> should return a value of <code>68</code>');",
+        "assert(convert(30) === 86, 'message: <code>convert(30)</code> should return a value of <code>86</code>');"
       ],
       "challengeSeed": [
+        "function convert(Tc) {",
+        "  // Only change code below this line",
         "",
         "",
-        ""
+        "  // Only change code above this line",
+        "  if(typeof Tf !== 'undefined') {",
+        "\treturn Tf;",
+        "  } else {",
+        "    return \"Tf not defined\";",
+        "  }",
+        "}",
+        "",
+        "// Change the inputs below to test your code",
+        "convert(30);"
       ],
       "solutions": [
-        ""
+        "function convert(Tc) {",
+        "  var Tf = Tc * 9/5 + 32;",
+        "  if(typeof Tf !== 'undefined') {",
+        "\treturn Tf;",
+        "  } else {",
+        "    return \"Tf not defined\";",
+        "  }",
+        "}"
       ],
-      "type": "waypoint",
-      "challengeType": "1",
+      "type": "bonfire",
+      "challengeType": "5",
       "nameCn": "",
       "nameFr": "",
       "nameRu": "",
@@ -779,6 +804,7 @@
         "assert((function(){if(typeof(myLastName) !== \"undefined\" && typeof(myLastName) === \"string\" && myLastName.length > 0){return true;}else{return false;}})(), 'message: <code>myLastName</code> should be a string with at least one character in it.');"
       ],
       "challengeSeed": [
+        "// Example",
         "var firstName = \"Alan\";",
         "var lastName = \"Turing\";",
         "",
@@ -810,7 +836,7 @@
         "assert(editor.getValue().match(/\\\\\"/g).length === 4 && editor.getValue().match(/[^\\\\]\"/g).length === 2, 'message: You should use two double quotes (<code>&quot;</code>) and four escaped double quotes (<code>&#92;&quot;</code>) ');"
       ],
       "challengeSeed": [
-        "var myStr;",
+        "var myStr; // Change this line",
         "",
         ""
       ],
@@ -870,7 +896,7 @@
         "assert(myStr === \"\\\\ \\t \\t \\r \\n\", 'message: <code>myStr</code> should have the escape sequences for <code>backslash tab tab carriage return new line</code> seperated by spaces');"
       ],
       "challengeSeed": [
-        "var myStr;",
+        "var myStr; // Change this line",
         "",
         ""
       ],
@@ -1617,27 +1643,60 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244bc",
-      "title": "Checkpoint: Arrays",
+      "title": "Shopping List",
       "description": [
-        ""
+        "Create a shopping list in the variable <code>myList</code>.  The list should be a multi-dimensional array containing several sub-arrays.  ",
+        "The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity. IE:",
+        "<code>[\"Chocolate Bar\", 15]</code>",
+        "There should be at least 5 sub-arrays in the list."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(isArray, 'message: <code>myList</code> should be an array');",
+        "assert(hasString, 'message: The first elements in each of your sub-arrays must all be strings');",
+        "assert(hasNumber, 'message: The second elements in each of your sub-arrays must all be numbers');",
+        "assert(count > 4, 'message: You must have at least 5 items in your list');"
       ],
       "challengeSeed": [
-        "",
+        "var myList = [];",
         "",
         ""
       ],
       "tail": [
-        ""
+        "var count = 0;",
+        "var isArray = true;",
+        "var hasString = true;",
+        "var hasNumber = true;",
+        "(function(list){",
+        "  if(Array.isArray(myList)) {",
+        "    myList.forEach(function(elem) {",
+        "      if(typeof elem[0] !== 'string') {",
+        "        hasString = false;",
+        "      }",
+        "      if(typeof elem[1] !== 'number') {",
+        "        hasNumber = false;",
+        "      }",
+        "    });",
+        "    count = myList.length;",
+        "    return JSON.stringify(myList);",
+        "  } else {",
+        "    isArray = false;",
+        "    return \"myList is not an array\";",
+        "  }",
+        "",
+        "})(myList);"
       ],
       "solutions": [
-        ""
+        "var myList = [",
+        "  [\"Candy\", 10],",
+        "  [\"Potatoes\", 12],",
+        "  [\"Eggs\", 12],",
+        "  [\"Catfood\", 1],",
+        "  [\"Toads\", 9]",
+        "];"
       ],
-      "type": "waypoint",
-      "challengeType": "1",
+      "type": "bonfire",
+      "challengeType": "5",
       "nameCn": "",
       "nameFr": "",
       "nameRu": "",
@@ -1659,8 +1718,8 @@
         "<h4>Instructions</h4>Create a function called <code>myFunction</code> which prints \"Hi World\" to the dev console. Call that function."
       ],
       "tests": [
-        "assert(typeof myFunction === 'function', 'message: <code>myFunction</code> should be a function');",
-        "console.log(\"1 '\" + logOutput + \"'\", /Hi World/.test(logOutput)); assert(/Hi World/.test(logOutput), 'message: <code>myFunction</code> should output \"Hi World\"');"
+        "console.log(\"1 '\" + logOutput + \"'\", \"op: \" + /Hi World/.test(logOutput)); assert(\"Hi World\" === logOutput, 'message: <code>myFunction</code> should output \"Hi World\"');",
+        "assert(typeof myFunction === 'function', 'message: <code>myFunction</code> should be a function');"
       ],
       "challengeSeed": [
         "// Example",
@@ -1686,8 +1745,6 @@
         "  console.log = oldLog;",
         "}",
         "",
-        "",
-        "",
         "if (typeof myFunction !== \"function\") { ",
         "  (function() { return \"myFunction is not defined\"; })();",
         "} else {",
@@ -1695,8 +1752,7 @@
         "  myFunction();  ",
         "  uncapture();",
         "  (function() { return logOutput || \"console.log never called\"; })();",
-        "}",
-        ""
+        "}"
       ],
       "solutions": [
         "function myFunction() {",
@@ -1721,7 +1777,7 @@
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert((function(){if(typeof(f) !== \"undefined\" && f === a + b){return true;}else{return false;}})(), 'message: Your function should return the value of <code>a + b</code>.');"
+        "assert((function(){if(typeof(f) !== \"undefined\" && f === a + b){return true;}else{return false;}})(), 'message: Your function should ouput the value of <code>a + b</code>.');"
       ],
       "challengeSeed": [
         "// Example",
@@ -1753,7 +1809,7 @@
       "id": "56533eb9ac21ba0edf2244be",
       "title": "Global Scope and Functions",
       "description": [
-        "Show how globals are available in functions"
+        "In Javascript, <dfn>scope</dfn> refers to the visibility of variables."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -1869,22 +1925,36 @@
       "id": "56533eb9ac21ba0edf2244c2",
       "title": "Return a Value from a Function with Return",
       "description": [
-        "Introduce the return statement"
+        "We can pass values into a function with <dfn>arguments</dfn>.  You can use a <code>return</code> statement to send a value back out of a function.",
+        "For Example:",
+        "<blockquote>function plusThree(num) {<br />  return num + 3;<br />}<br />var answer = plusThree(5); // 8</blockquote>",
+        "<code>plusThree</code> takes an <dfn>argument</dfn> for <code>num</code> and returns a value equal to <code>num + 3</code>.",
+        "<h4>Instructions</h4>Create a function <code>timesFive</code> that accepts one argument, multiplies it by <code>5</code>, and returns the new value."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(typeof timesFive === 'function', 'message: <code>timesFive</code> should be a function');",
+        "assert(timesFive(5) === 25, 'message: <code>timesFive(5)</code> should return <code>25</code>');",
+        "assert(timesFive(2) === 10, 'message: <code>timesFive(2)</code> should return <code>10</code>');",
+        "assert(timesFive(0) === 0, 'message: <code>timesFive(0)</code> should return <code>0</code>');"
       ],
       "challengeSeed": [
+        "// Example",
+        "function minusSeven(num) {",
+        "  return num - 7;",
+        "}",
         "",
+        "// Only change code below this line",
         "",
         ""
       ],
       "tail": [
-        ""
+        "(function() { if(typeof timesFive === 'function'){ return \"timesfive(5) === \" + timesFive(5); } else { return \"timesFive is not a function\"} })();"
       ],
       "solutions": [
-        ""
+        "function timesFive(num) {",
+        "  return num * 5;",
+        "}"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -1898,15 +1968,24 @@
       "id": "56533eb9ac21ba0edf2244c3",
       "title": "Assignment with a Returned Value",
       "description": [
-        "Show how to assign a returned value to a variable"
+        "If you'll recall from our discussion of <a href=\"challenges/waypoint-storing-values-with-the-equal-operator\">Storing Values with the Equal Operator</a>, everything to the right of the equal sign is resolved before the value is assigned.  This means we can take the return value of a function and assign it to a variable.",
+        "Assume we have pre-defined a function <code>sum</code> which adds two numbers together, then: ",
+        "<code>var ourSum = sum(5, 12);</code>",
+        "will call <code>sum</code>, which returns a value of <code>17</code> and assigns it to <code>ourSum</code>.",
+        "<h4>Instructions</h4>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
         "assert(1===1, 'message: message here');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "function process(num) {",
+        "  return (num + 3) / 5;",
+        "}",
         "",
-        "",
+        "// Only change code below this line",
+        "var processed = 0; // Change this line",
         ""
       ],
       "tail": [
@@ -3574,19 +3653,69 @@
       "id": "56533eb9ac21ba0edf2244cb",
       "title": "Introducing JavaScript Object Notation (JSON)",
       "description": [
-        "Introduce mixed Array/Object Structures"
+        "JavaScript Object Notation or <code>JSON</code> uses the format of Javascript Objects to store data.  JSON is flexible becuase it allows for data structures with arbitrary combinations of <dfn>strings</dfn>, <dfn>numbers</dfn>, <dfn>booleans</dfn>, <dfn>arrays</dfn>, and <dfn>objects</dfn>.  ",
+        "Here is an example of a JSON object:",
+        "<blockquote>var ourMusic = [<br />  {<br />    \"artist\": \"Daft Punk\",<br />    \"title\": \"Homework\",<br />    \"release_year\": 1997,<br />    \"formats\": [ <br />      \"CD\", <br />      \"Cassette\", <br />      \"LP\" ],<br />    \"gold\": true<br />  }<br />];</blockquote>",
+        "This is an array of objects and the object has various peices of <dfn>metadata</dfn> about an album.  It also has a nested array of formats. Additional album records could be added to the top level array.",
+        "<h4>Instructions</h4>Add a new album to the <code>myMusic</code> JSON object.  Add  <code>artist</code> and <code>title</code> strings, <code>release_year</code> year, and a <code>formats</code> array of strings."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(Array.isArray(myMusic), 'message: <code>myMusic</code> should be an array');",
+        "assert(myMusic.length > 1, 'message: <code>myMusic</code> should have at least two elements');",
+        "assert(typeof myMusic[1] === 'object', 'message: <code>myMusic[1]</code> should be an object');",
+        "assert(Object.keys(myMusic[1]).length > 3, 'message: <code>myMusic[1]</code> should have at least 4 properties');",
+        "assert(myMusic[1].hasOwnProperty('artist') && typeof myMusic[1].artist === 'string', 'message: <code>myMusic[1]</code> should contain an <code>artist</code> property which is a string');",
+        "assert(myMusic[1].hasOwnProperty('title') && typeof myMusic[1].title === 'string', 'message: <code>myMusic[1]</code> should  contain a <code>title</code> property which is a string');",
+        "assert(myMusic[1].hasOwnProperty('release_year') && typeof myMusic[1].release_year === 'number', 'message: <code>myMusic[1]</code> should contain a <code>release_year</code> property which is a number');",
+        "assert(myMusic[1].hasOwnProperty('formats') && Array.isArray(myMusic[1].formats), 'message: <code>myMusic[1]</code> should contain a <code>formats</code> property which is an array');",
+        "assert(typeof myMusic[1].formats[0] === 'string' && myMusic[1].formats.length > 1, 'message: <code>formats</code> should be an array of strings with at least two elements');"
       ],
       "challengeSeed": [
-        "",
-        "",
+        "var myMusic = [",
+        "  {",
+        "  \t\"artist\": \"Billy Joel\",",
+        "    \"title\": \"Piano Man\",",
+        "    \"release_year\": 1993,",
+        "    \"formats\": [ ",
+        "      \"CS\", ",
+        "      \"8T\", ",
+        "      \"LP\" ],",
+        "    \"gold\": true",
+        "  }",
+        "  // Add record here",
+        "];",
         ""
       ],
+      "tail": [
+        "(function(x){ if (Array.isArray(x)) { return JSON.stringify(x); } return \"myMusic is not an array\"})(myMusic);"
+      ],
       "solutions": [
-        ""
+        "var myMusic = [",
+        "  {",
+        "  \t\"artist\": \"Billy Joel\",",
+        "    \"title\": \"Piano Man\",",
+        "    \"release_year\": 1993,",
+        "    \"formats\": [ ",
+        "      \"CS\", ",
+        "      \"8T\", ",
+        "      \"LP\" ],",
+        "    \"gold\": true",
+        "  }, ",
+        "  {",
+        "    \"artist\": \"ABBA\",",
+        "    \"title\": \"Ring Ring\",",
+        "    \"release_year\": 1973,",
+        "    \"formats\": [ ",
+        "      \"CS\", ",
+        "      \"8T\", ",
+        "      \"LP\",",
+        "\t  \"CD\",",
+        "\t]",
+        "  }",
+        "}",
+        "  // Add record here",
+        "];"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -3600,19 +3729,51 @@
       "id": "56533eb9ac21ba0edf2244cc",
       "title": "Accessing Nested Objects in JSON",
       "description": [
-        "myObj.subObject.subSubObject"
+        "The properties and sub-properties of JSON objects can be accessed by chaining together the dot or bracket notation.",
+        "Here is a nested JSON Object:",
+        "<blockquote>var ourStorage = {<br />  \"desk\": {<br />    \"drawer\": \"stapler\"<br />  },<br />  \"cabinet\": {<br />    \"top drawer\": { <br />      \"folder1\": \"a file\",<br />      \"folder2\": \"secrets\"<br />    },<br />    \"bottom drawer\": \"soda\"<br />  }<br />}<br />ourStorage.cabinet[\"top drawer\"].folder2;  // \"secrets\"<br />ourStoage.desk.drawer; // \"stapler\"</blockquote>",
+        "<h4>Instructions</h4>Access the <code>myStorage</code> JSON object to retrieve the contents of the <code>glove box</code>.  Only use object notation for properties with a space in their name."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(gloveBoxContents === \"maps\", 'message: <code>gloveBoxContents</code> should equal \"maps\"');",
+        "assert(/=\\s*myStorage\\.car\\.inside\\[([\"'])glove box\\1\\]/.test(editor.getValue()), 'message: Use dot and bracket notation to access <code>myStorage</code>');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "var myStorage = {",
+        "  \"car\": {",
+        "    \"inside\": {",
+        "      \"glove box\": \"maps\",",
+        "      \"passenger seat\": \"crumbs\"",
+        "     },",
+        "    \"outside\": {",
+        "      \"trunk\": \"jack\"",
+        "    }",
+        "  }",
+        "};",
         "",
+        "// Only change code below this line",
         "",
+        "var gloveBoxContents = \"\"; // Change this line",
         ""
       ],
+      "tail": [
+        "(function(x) { if(typeof gloveBoxContents != 'undefined') { return \"gloveBoxContents = \", x} else return \"gloveBoxContents is undefined\";})(gloveBoxContents);"
+      ],
       "solutions": [
-        ""
+        "var myStorage = {",
+        "  \"car\": {",
+        "    \"inside\": {",
+        "      \"glove box\": \"maps\",",
+        "      \"passenger seat\": \"crumbs\"",
+        "     },",
+        "    \"outside\": {",
+        "      \"trunk\": \"jack\"",
+        "    }",
+        "  }",
+        "};",
+        "var gloveBoxContents = myStorage.car.inside['glove box']; // Change this line"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -3626,15 +3787,43 @@
       "id": "56533eb9ac21ba0edf2244cd",
       "title": "Accessing Nested Arrays in JSON",
       "description": [
-        "myObj.subArray[n].subObject"
+        "As we have seen in earlier examples, JSON objects can contain both nested objects and nested arrays.  Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays.",
+        "Here is an example of how to access a nested array:",
+        "<blockquote>var ourPets = { <br />  \"cats\": [<br />    \"Meowzer\",<br />    \"Fluffy\",<br />    \"Kit-Cat\"<br />  ],<br />  \"dogs:\" [<br />    \"Spot\",<br />    \"Bowser\",<br />    \"Frankie\"<br />  ]<br />};<br />ourPets.cats[1]; // \"Fluffy\"<br />ourPets.dogs[0]; // \"Spot\"</blockquote>",
+        "<h4>Instructions</h4>Retrieve the second tree using object dot and array bracket notation."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        "assert(secondTree === \"pine\", 'message: <code>secondTree</code> should equal \"pine\"');",
+        "assert(/=\\s*myPlants\\[1\\].list\\[1\\]/.test(editor.getValue()), 'message: Use dot and bracket notation to access <code>myPlants</code>');"
       ],
       "challengeSeed": [
+        "// Setup",
+        "var myPlants = [",
+        "  { ",
+        "    type: \"flowers\",",
+        "    list: [",
+        "      \"rose\",",
+        "      \"tulip\",",
+        "      \"dandelion\"",
+        "    ]",
+        "  },",
+        "  {",
+        "    type: \"trees\",",
+        "    list: [",
+        "      \"fir\",",
+        "      \"pine\",",
+        "      \"birch\"",
+        "    ]",
+        "  }  ",
+        "];",
         "",
+        "// Only change code below this line",
         "",
+        "var secondTree = \"\"; // Change this line",
+        ""
+      ],
+      "tail": [
         ""
       ],
       "solutions": [
@@ -3689,6 +3878,9 @@
         "",
         ""
       ],
+      "tail": [
+        ""
+      ],
       "solutions": [
         ""
       ],
@@ -3712,34 +3904,31 @@
         "The <code>condition</code> statement is evaluated at the beginning of every loop iteration and will continue as long as it evalutes to <code>true</code>. When <code>condition</code> is <code>false</code> at the start of the iteration, the loop will stop executing.  This means if <code>condition</code> starts as <code>false</code>, your loop will never execute.",
         "The <code>final-expression</code> is executed at the end of each loop iteration, prior to the next <code>condition</code> check and is usually used to increment or decrement your loop counter.",
         "In the following example we initialize with <code>i = 0</code> and iterate while our condition <code>i < 5</code> is true.  We'll increment <code>i</code> by <code>1</code> in each loop iteration with <code>i++</code> as our <code>final-expression</code>.",
-        "<code>var ourArray = [];</code>",
-        "<code>for (var i = 0; i < 5; i++) {</code>",
-        "<code>&nbsp;&nbsp;ourArray.push(i);</code>",
-        "<code>}</code>",
+        "<blockquote>var ourArray = [];<br />for (var i = 0; i < 5; i++) {<br />  ourArray.push(i);<br />}</blockquote>",
         "<code>ourArray</code> will now contain <code>[0,1,2,3,4]</code>.",
-        "Let's use a <code>for</code> loop to work to push the values 1 through 5 onto <code>myArray</code>."
+        "<h4>Instructions</h4>Use a <code>for</code> loop to work to push the values 1 through 5 onto <code>myArray</code>."
       ],
       "tests": [
         "assert(editor.getValue().match(/for\\s*\\(/g).length > 1, 'message: You should be using a <code>for</code> loop for this.');",
         "assert.deepEqual(myArray, [1,2,3,4,5], 'message: <code>myArray</code> should equal <code>[1,2,3,4,5]</code>.');"
       ],
       "challengeSeed": [
+        "// Example",
         "var ourArray = [];",
         "",
         "for (var i = 0; i < 5; i++) {",
         "  ourArray.push(i);",
         "}",
         "",
+        "// Setup",
         "var myArray = [];",
         "",
         "// Only change code below this line.",
         "",
-        "",
-        "",
-        "// Only change code above this line.",
-        "",
-        "if (typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}",
         ""
+      ],
+      "tail": [
+        "if (typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}"
       ],
       "type": "waypoint",
       "challengeType": "1"
@@ -3750,35 +3939,32 @@
       "description": [
         "For loops don't have to iterate one at a time. By changing our <code>final-expression</code>, we can count by even numbers.",
         "We'll start at <code>i = 0</code> and loop while <code>i < 10</code>.  We'll increment <code>i</code> by 2 each loop with <code>i += 2</code>.",
-        "<code>var ourArray = [];</code>",
-        "<code>for (var i = 0; i < 10; i += 2) {</code>",
-        "<code>&nbsp;&nbsp;ourArray.push(i);</code>",
-        "<code>}</code>",
+        "<blockquote>var ourArray = [];<br />for (var i = 0; i < 10; i += 2) {<br />  ourArray.push(i);<br />}</blockquote>",
         "<code>ourArray</code> will now contain <code>[0,2,4,6,8]</code>.",
-        "Let's change our <code>initialization</code> and <code>final-expression</code> so we can count by odd numbers.",
-        "Push the odd numbers from 1 through 9 to <code>myArray</code> using a <code>for</code> loop."
+        "Let's change our <code>initialization</code> so we can count by odd numbers.",
+        "<h4>Instructions</h4>Push the odd numbers from 1 through 9 to <code>myArray</code> using a <code>for</code> loop."
       ],
       "tests": [
         "assert(editor.getValue().match(/for\\s*\\(/g).length > 1, 'message: You should be using a <code>for</code> loop for this.');",
         "assert.deepEqual(myArray, [1,3,5,7,9], 'message: <code>myArray</code> should equal <code>[1,3,5,7,9]</code>.');"
       ],
       "challengeSeed": [
+        "// Example",
         "var ourArray = [];",
         "",
         "for (var i = 0; i < 10; i += 2) {",
         "  ourArray.push(i);",
         "}",
         "",
+        "// Setup",
         "var myArray = [];",
         "",
         "// Only change code below this line.",
         "",
-        "",
-        "",
-        "// Only change code above this line.",
-        "",
-        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}",
         ""
+      ],
+      "tail": [
+        "if(typeof(myArray) !== \"undefined\"){(function(){return myArray;})();}"
       ],
       "type": "waypoint",
       "challengeType": "1"
@@ -3790,30 +3976,27 @@
         "A for loop can also count backwards, so long as we can define the right conditions.",
         "In order to count backwards by twos, we'll need to change our <code>initialization</code>, <code>condition</code>, and <code>final-expression</code>.",
         "We'll start at <code>i = 10</code> and loop while <code>i > 0</code>.  We'll decrement <code>i</code> by 2 each loop with <code>i -= 2</code>.",
-        "<code>var ourArray = [];</code>",
-        "<code>for (var i = 10; i > 0; i -= 2) {</code>",
-        "<code>&nbsp;&nbsp;ourArray.push(i);</code>",
-        "<code>}</code>",
+        "<blockquote>var ourArray = [];<br />for (var i=10; i > 0; i-=2) {<br />  ourArray.push(i);<br />}</blockquote>",
         "<code>ourArray</code> will now contain <code>[10,8,6,4,2]</code>.",
         "Let's change our <code>initialization</code> and <code>final-expression</code> so we can count backward by twos by odd numbers.",
-        "Push the odd numbers from 9 through 1 to <code>myArray</code> using a <code>for</code> loop."
+        "<h4>Instructions</h4>Push the odd numbers from 9 through 1 to <code>myArray</code> using a <code>for</code> loop."
       ],
       "tests": [
         "assert(editor.getValue().match(/for\\s*\\(/g).length > 1, 'message: You should be using a <code>for</code> loop for this.');",
         "assert.deepEqual(myArray, [9,7,5,3,1], 'message: <code>myArray</code> should equal <code>[9,7,5,3,1]</code>.');"
       ],
       "challengeSeed": [
+        "// Example",
         "var ourArray = [];",
         "",
         "for (var i = 10; i > 0; i -= 2) {",
         "  ourArray.push(i);",
         "}",
         "",
+        "// Setup",
         "var myArray = [];",
         "",
         "// Only change code below this line.",
-        "",
-        "",
         ""
       ],
       "tail": [
@@ -3821,6 +4004,41 @@
       ],
       "type": "waypoint",
       "challengeType": "1"
+    },
+    {
+      "id": "5675e877dbd60be8ad28edc6",
+      "title": "Iterate Through an Array with a For Loop",
+      "description": [
+        "A common task in Javascript is to iterate through the contents of an array.  One way to do that is with a <code>for</code> loop. This code will output each element of the array <code>arr</code> to the console:",
+        "<blockquote>var arr = [10,9,8,7,6];<br />for (var i=0; i < arr.length; i++) {<br />   console.log(arr[i]);<br />}</blockquote>",
+        "Remember that Arrays have zero-based numbering, which means the last index of the array is length - 1.  Our <dfn>condition</dfn> for this loop is <code>i < arr.length</code>, which stops when <code>i</code> is at length - 1.",
+        "<h4>Instructions</h4>Create a variable <code>total</code>. Use a <code>for</code> loop to add each element of <code>myArr</code> to total."
+      ],
+      "releasedOn": "11/27/2015",
+      "tests": [
+        "assert(1===1, 'message: message here');"
+      ],
+      "challengeSeed": [
+        "// Setup",
+        "var myArr = [ 2, 3, 4, 5, 6];",
+        "",
+        "// Only change code below this line",
+        "",
+        ""
+      ],
+      "tail": [
+        ""
+      ],
+      "solutions": [
+        ""
+      ],
+      "type": "waypoint",
+      "challengeType": "1",
+      "nameCn": "",
+      "nameFr": "",
+      "nameRu": "",
+      "nameEs": "",
+      "namePt": ""
     },
     {
       "id": "56533eb9ac21ba0edf2244e1",
@@ -3835,6 +4053,9 @@
       "challengeSeed": [
         "",
         "",
+        ""
+      ],
+      "tail": [
         ""
       ],
       "solutions": [
@@ -3883,6 +4104,32 @@
       "challengeType": "1"
     },
     {
+      "id": "56533eb9ac21ba0edf2244e2",
+      "title": "Checkpoint: Conditionals and Loops",
+      "description": [
+        ""
+      ],
+      "releasedOn": "11/27/2015",
+      "tests": [
+        "assert(1===1, 'message: message here');"
+      ],
+      "challengeSeed": [
+        "",
+        "",
+        ""
+      ],
+      "solutions": [
+        ""
+      ],
+      "type": "waypoint",
+      "challengeType": "1",
+      "nameCn": "",
+      "nameFr": "",
+      "nameRu": "",
+      "nameEs": "",
+      "namePt": ""
+    },
+    {
       "id": "cf1111c1c11feddfaeb9bdef",
       "title": "Generate Random Fractions with JavaScript",
       "description": [
@@ -3910,32 +4157,6 @@
       ],
       "type": "waypoint",
       "challengeType": "1"
-    },
-    {
-      "id": "56533eb9ac21ba0edf2244e2",
-      "title": "Checkpoint: Conditionals and Loops",
-      "description": [
-        ""
-      ],
-      "releasedOn": "11/27/2015",
-      "tests": [
-        "assert(1===1, 'message: message here');"
-      ],
-      "challengeSeed": [
-        "",
-        "",
-        ""
-      ],
-      "solutions": [
-        ""
-      ],
-      "type": "waypoint",
-      "challengeType": "1",
-      "nameCn": "",
-      "nameFr": "",
-      "nameRu": "",
-      "nameEs": "",
-      "namePt": ""
     },
     {
       "id": "cf1111c1c12feddfaeb1bdef",
