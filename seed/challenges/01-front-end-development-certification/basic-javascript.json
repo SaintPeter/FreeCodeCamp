@@ -621,10 +621,10 @@
       "description": [
         "Like the <code>+=</code> operator, <code>-=</code> subtracts a number from a variable.",
         "<code>myVar = myVar - 5;</code>",
-        "Will subtract <code>5</code> from <code>myVar</code>. This can be rewritten as: ",
+        "will subtract <code>5</code> from <code>myVar</code>. This can be rewritten as: ",
         "<code>myVar -= 5;</code>",
         "<h4>Instructions</h4>",
-        "Convert the assignements for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>-=</code> operator."
+        "Convert the assignments for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>-=</code> operator."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -673,12 +673,12 @@
       "id": "56533eb9ac21ba0edf2244b1",
       "title": "Assignment with Times Equals",
       "description": [
-        "Yhe <code>*=</code> operator multiplies a variable by a number.",
+        "The <code>*=</code> operator multiplies a variable by a number.",
         "<code>myVar = myVar * 5;</code>",
-        "Will multiply <code>myVar</code> by <code>5</code>. This can be rewritten as: ",
+        "will multiply <code>myVar</code> by <code>5</code>. This can be rewritten as: ",
         "<code>myVar *= 5;</code>",
         "<h4>Instructions</h4>",
-        "Convert the assignements for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>*=</code> operator."
+        "Convert the assignments for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>*=</code> operator."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -778,7 +778,7 @@
       "description": [
         "To test your learning you will create a solution \"from scratch\".  Place your code between the indicated lines and it will be tested against multiple test cases.",
         "The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.",
-        "You are given a variable <code>Tc</code> representing a temperature in Celsius.  Create a variable <code>Tf</code> and apply the algorithm to assign it the corrasponding temperature in Fahrenheit."
+        "You are given a variable <code>Tc</code> representing a temperature in Celsius.  Create a variable <code>Tf</code> and apply the algorithm to assign it the corresponding temperature in Fahrenheit."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -792,7 +792,7 @@
       "challengeSeed": [
         "function convert(Tc) {",
         "  // Only change code below this line",
-        "",
+        "  ",
         "",
         "  // Only change code above this line",
         "  if(typeof Tf !== 'undefined') {",
@@ -827,9 +827,11 @@
       "id": "bd7123c9c444eddfaeb5bdef",
       "title": "Declare String Variables",
       "description": [
-        "Previously we have used the code <code>var myName = \"your name\"</code>. This is what we call a <code>String</code> variable. It is nothing more than a \"string\" of characters. JavaScript strings are always wrapped in quotes.",
+        "Previously we have used the code",
+        "<code>var myName = \"your name\"</code>",
+        "<code>\"your name\"</code> is called a <dfn>string</dfn> <dfn>literal</dfn>. It is a string because it is a series of zero or more characters enclosed in single or double quotes.",
         "<h4>Instructions</h4>",
-        "Create two new string variables: <code>myFirstName</code> and <code>myLastName</code> and assign them the values of your first and last name, respectively."
+        "Create two new <code>string</code> variables: <code>myFirstName</code> and <code>myLastName</code> and assign them the values of your first and last name, respectively."
       ],
       "tests": [
         "assert((function(){if(typeof(myFirstName) !== \"undefined\" && typeof(myFirstName) === \"string\" && myFirstName.length > 0){return true;}else{return false;}})(), 'message: <code>myFirstName</code> should be a string with at least one character in it.');",
@@ -859,10 +861,13 @@
       "id": "56533eb9ac21ba0edf2244b5",
       "title": "Escaping Literal Quotes in Strings",
       "description": [
-        "When you are defining a string you must start and end with a double or single quote.  What happens when you need a <dfn>literal</dfn> quote inside of your string?",
-        "In Javascript you can <dfn>escape</dfn> a quote inside a string by placing a <dfn>backslash</dfn> (<code>\\</code>) in front of the quote.  This signals Javascript that the following quote is not the end of the string, but should instead should appear inside the string.",
+        "When you are defining a string you must start and end with a single or double quote.  What happens when you need a literal quote: <code>\"</code> or <code>'</code> inside of your string?",
+        "In JavaScript, you can <dfn>escape</dfn> a quote from considering it as an end of string quote by placing a <dfn>backslash</dfn> (<code>\\</code>) in front of the quote.",
+        "<code>\"Alan said, \\\"Peter is learning JavaScript\\\".\"</code>",
+        "This signals JavaScript that the following quote is not the end of the string, but should instead appear inside the string.",
         "<h4>Instruction</h4>",
-        "Use <dfn>backslashes</dfn> to assign the following to <code>myStr</code>:<br /><code>\"I am a \"double quoted\" string inside \"double quotes\"\"</code>"
+        "Use <dfn>backslashes</dfn> to assign the following to <code>myStr</code> variable:",
+        "<code>\"I am a \"double quoted\" string inside \"double quotes\"\"</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -888,17 +893,18 @@
       "id": "56533eb9ac21ba0edf2244b4",
       "title": "Quoting Strings with Single Quotes",
       "description": [
-        "<dfn>Strings</dfn> in Javascript may be declared with both single or double quotes, so long as you start and end with the same type of quote.  Unlike some languages, single and double quotes are functionally identical in Javascript.",
+        "<dfn>String</dfn> values in JavaScript may be written with single or double quotes, so long as you start and end with the same type of quote.  Unlike some languages, single and double quotes are functionally identical in Javascript.",
         "<code>\"This string has \\\"double quotes\\\" in it\"</code>",
-        "The value in using one or the other has to do with the need to <dfn>escape</dfn> quotes of the same type.  If you have a string with many double quotes, this can be difficult to write and to read.  Instead, use single quotes:",
-        "<code>'This string has \"double quotes\" in it'</code>",
+        "The value in using one or the other has to do with the need to <dfn>escape</dfn> quotes of the same type.  If you have a string with many double quotes, this can be difficult to read and write.  Instead, use single quotes:",
+        "<code>'This string has \"double quotes\" in it. And \"probably\" lots of them.'</code>",
         "<h4>Instructions</h4>",
         "Change the provided string from double to single quotes and remove the escaping."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
         "assert(!/\\\\/g.test(editor.getValue()), 'message: Remove all the <code>backslashes</code> (<code>\\</code>)');",
-        "assert(editor.getValue().match(/\"/g).length === 4 && editor.getValue().match(/'/g).length === 2, 'message: You should have two single quotes <code>&#39;</code> and four double quotes <code>&quot;</code>')"
+        "assert(editor.getValue().match(/\"/g).length === 4 && editor.getValue().match(/'/g).length === 2, 'message: You should have two single quotes <code>&#39;</code> and four double quotes <code>&quot;</code>');",
+        "assert(myStr === '<a href=\"http://www.example.com\" target=\"_blank\">Link</a>', 'message: Only remove the backslashes <code>\\</code> used to escape quotes.');"
       ],
       "challengeSeed": [
         "var myStr = \"<a href=\\\"http://www.example.com\\\" target=\\\"_blank\\\">Link</a>\";",
@@ -920,15 +926,15 @@
       "id": "56533eb9ac21ba0edf2244b6",
       "title": "Escape Sequences in Strings",
       "description": [
-        "Quotes are not the only character than can be <dfn>escaped</dfn> inside a string.  Here is a table of common escape sequences:",
+        "Quotes are not the only characters that can be <dfn>escaped</dfn> inside a string.  Here is a table of common escape sequences:",
         "<table class=\"table table-striped\"><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td>\\'</td><td>single quote</td></tr><tr><td>\\\"</td><td>double quote</td></tr><tr><td>\\\\</td><td>backslash</td></tr><tr><td>\\n</td><td>new line</td></tr><tr><td>\\r</td><td>carriage return</td></tr><tr><td>\\t</td><td>tab</td></tr><tr><td>\\b</td><td>backspace</td></tr><tr><td>\\f</td><td>form feed</td></tr></tbody></table>",
-        "Note that the backslash itself must be escaped in order to display as a backslash.",
+        "<emphasis>Note that the backslash itself must be escaped in order to display as a backslash.</emphasis>",
         "<h4>Instructions</h4>",
-        "Encode the following sequence, seperated by spaces:<br /> <code>backslash tab tab carriage return new line</code> and assign it to <code>myStr</code>"
+        "Encode the following sequence, separated by spaces:<br><code>backslash tab tab carriage-return new-line</code> and assign it to <code>myStr</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(myStr === \"\\\\ \\t \\t \\r \\n\", 'message: <code>myStr</code> should have the escape sequences for <code>backslash tab tab carriage return new line</code> seperated by spaces');"
+        "assert(myStr === \"\\\\ \\t \\t \\r \\n\", 'message: <code>myStr</code> should have the escape sequences for <code>backslash tab tab carriage-return new-line</code> separated by spaces');"
       ],
       "challengeSeed": [
         "var myStr; // Change this line",
@@ -936,7 +942,7 @@
         ""
       ],
       "solutions": [
-        ""
+        "var myStr = \"\\\\ \\t \\t \\r \\n\";"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -948,9 +954,12 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244b7",
-      "title": "Concatanting Strings with the Plus Operator",
+      "title": "Concatenating Strings with Plus Operator",
       "description": [
-        "In Javascript the <code>+</code> operator for strings is called the <dfn>concatanation</dfn> operator.  You can build strings out of other strings by <dfn>concatanating</dfn> them together.",
+        "In JavaScript, the <code>+</code> operator when used with a <code>String</code> value, it is called <dfn>concatenation</dfn> operator.  You can build a string out of other strings by <dfn>concatenating</dfn> them together.",
+        "",
+        "<code>'My name is Alan.' + ' And I am able to concatenate.'</code>",
+        "",
         "<h4>Instructions</h4>",
         "Build <code>myStr</code> from the strings <code>\"This is the start. \"</code> and <code>\"This is the end.\"</code> using the <code>+</code> operator.",
         ""
@@ -983,11 +992,11 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244b8",
-      "title": "Concatanting Strings with the Plus Equals Operator",
+      "title": "Concatenating Strings with the Plus Equals Operator",
       "description": [
-        "We can also use the <code>+=</code> operator to concatanate a string onto the end of an existing string.  This can be very helpful to break a long string over several lines.",
+        "We can also use the <code>+=</code> operator to <dfn>concatenate</dfn> a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.",
         "<h4>Instructions</h4>",
-        "Build <code>myStr</code> over several lines by concatenating these two strings:<br /><code>\"This is the first line. \"</code> and <code>\"This is the second line.\"</code> using the <code>+=</code> operator."
+        "Build <code>myStr</code> over several lines by concatenating these two strings:<br><code>\"This is the first line. \"</code> and <code>\"This is the second line.\"</code> using the <code>+=</code> operator."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
