@@ -266,8 +266,12 @@
       "id": "cf1111c1c11feddfaeb3bdef",
       "title": "Add Two Numbers with JavaScript",
       "description": [
-        "Let's try to add two numbers using JavaScript.",
-        "JavaScript uses the <code>+</code> symbol for addition.",
+        "<code>Number</code> is another data type in JavaScript which represents numeric data.",
+        "Now let's try to add two numbers using JavaScript.",
+        "JavaScript uses the <code>+</code> symbol as addition operation when placed between two numbers.",
+        "",
+        "<strong>Example</strong><blockquote>5 + 10 = 15</blockquote>",
+        "",
         "<h4>Instructions</h4>",
         "Change the <code>0</code> so that sum will equal <code>20</code>."
       ],
@@ -291,6 +295,9 @@
       "description": [
         "We can also subtract one number from another.",
         "JavaScript uses the <code>-</code> symbol for subtraction.",
+        "",
+        "<strong>Example</strong><blockquote>12 - 6 = 6</blockquote>",
+        "",
         "<h4>Instructions</h4>",
         "Change the <code>0</code> so that difference will equal <code>12</code>."
       ],
@@ -317,7 +324,10 @@
       "title": "Multiply Two Numbers with JavaScript",
       "description": [
         "We can also multiply one number by another.",
-        "JavaScript uses the <code>*</code> symbol for multiplication.",
+        "JavaScript uses the <code>*</code> symbol for multiplication of two numbers.",
+        "",
+        "<strong>Example</strong><blockquote>13 * 13 = 169</blockquote>",
+        "",
         "<h4>Instructions</h4>",
         "Change the <code>0</code> so that product will equal <code>80</code>."
       ],
@@ -345,11 +355,14 @@
       "description": [
         "We can also divide one number by another.",
         "JavaScript uses the <code>/</code> symbol for division.",
+        "",
+        "<strong>Example</strong><blockquote>16 / 2 = 8</blockquote>",
+        "",
         "<h4>Instructions</h4>",
-        "Change the <code>0</code> so that <code>answer</code> will equal <code>2</code>."
+        "Change the <code>0</code> so that <code>quotient</code> will equal to <code>2</code>."
       ],
       "tests": [
-        "assert(answer === 2, 'message: Make the variable <code>answer</code> equal 2.');",
+        "assert(quotient === 2, 'message: Make the variable <code>quotient</code> equal to 2.');",
         "assert(/\\d+\\s*\\/\\s*\\d+/.test(editor.getValue()), 'message: Use the <code>/</code> operator');"
       ],
       "challengeSeed": [
@@ -358,7 +371,7 @@
         ""
       ],
       "tail": [
-        "(function(z){return 'answer = '+z;})(answer);"
+        "(function(z){return 'quotient = '+z;})(quotient);"
       ],
       "type": "waypoint",
       "challengeType": "1"
@@ -367,7 +380,7 @@
       "id": "56533eb9ac21ba0edf2244ac",
       "title": "Increment a Number with Javascript",
       "description": [
-        "You can easily <dfn>increment</dfn> or add one to a Javascript variable with the <code>++</code> operator.",
+        "You can easily <dfn>increment</dfn> or add one to a variable with the <code>++</code> operator.",
         "<code>i++;</code>",
         "is the equivilent of",
         "<code>i = i + 1;</code>",
@@ -406,7 +419,7 @@
       "id": "56533eb9ac21ba0edf2244ad",
       "title": "Decrement a Number with Javascript",
       "description": [
-        "You can easily <dfn>decrement</dfn> or decrease by one a Javascript variable with the <code>--</code> operator.",
+        "You can easily <dfn>decrement</dfn> or decrease a variable by one with the <code>--</code> operator.",
         "<code>i--;</code>",
         "is the equivilent of",
         "<code>i = i - 1;</code>",
@@ -445,9 +458,9 @@
       "id": "cf1391c1c11feddfaeb4bdef",
       "title": "Create Decimal Numbers with JavaScript",
       "description": [
-        "JavaScript number variables can also have decimal points.  Decimal numbers are sometimes refered to as <dfn>floating point<dfn> numbers or <dfn>floats</dfn>.  ",
+        "We can store decimal numbers in variables too. Decimal numbers are sometimes refered to as <dfn>floating point</dfn> numbers or <dfn>floats</dfn>.  ",
         "<strong>Note</strong>",
-        "Not all real numbers can be accurately represented in <code>floating point</code>.  This can lead to rounding errors.  <a href=\"https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems\" target=\"_blank\">Details Here</a>.",
+        "Not all real numbers can accurately be represented in <dfn>floating point</dfn>.  This can lead to rounding errors. <a href=\"https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems\" target=\"_blank\">Details Here</a>.",
         "",
         "Let's create a variable <code>myDecimal</code> and give it a decimal value."
       ],
@@ -496,7 +509,7 @@
       "title": "Divide one Decimal by Another with JavaScript",
       "description": [
         "Now let's divide one decimal by another.",
-        "Change the <code>0.0</code> so that your quotient will equal <code>2.2</code>."
+        "Change the <code>0.0</code> so that <code>quotient</code> will equal to <code>2.2</code>."
       ],
       "tests": [
         "assert(quotient === 2.2, 'message: The variable <code>quotient</code> should equal <code>2.2</code>.');",
@@ -518,12 +531,12 @@
       "title": "Find a Remainder with Modulus",
       "description": [
         "The modulus operator <code>%</code> gives the remainder of the division of two numbers.",
-        "<code>5 % 2</code> is <code>1</code> because",
-        "<code>Math.floor(5 / 2) === 2<br />2 * 2 === 4<br />5 - 4 === 1</code>",
+        "<strong>Example</strong><blockquote>5 % 2 = 1 because<br>Math.floor(5 / 2) = 2 (Quotient)<br>2 * 2 = 4<br>5 - 4 = 1 (Remainder)</blockquote>",
         "<strong>Usage</strong>",
-        "Modulus can be helpful in creating alternating or cycling values.  For example, in a loop an increasing variable <code>myVar % 2</code> will alternate between 0 and 1 as myVar goes between even and odd numbers respectively.",
+        "In Maths, a number can be checked even or odd by checking the remainder of division of the number by <code>2</code>. ",
+        "<blockquote>17 % 2 = 1 (17 is Odd)<br>48 % 2 = 0 (48 is Even)</blockquote>",
         "<h4>Instructions</h4>",
-        "Set <code>remainder</code> equal to the remainder of 11 divided by 3 using the modulus operator."
+        "Set <code>remainder</code> equal to the remainder of <code>11</code> divided by <code>3</code> using the <dfn>modulus</dfn> operator."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -531,12 +544,9 @@
         "assert(/\\d+\\s*%\\s*\\d+/.test(editor.getValue()), 'message: You should use the <code>%</code> operator');"
       ],
       "challengeSeed": [
-        "var quotient = Math.floor(11 / 3);",
-        "",
         "// Only change code below this line",
         "",
         "var remainder;",
-        "",
         ""
       ],
       "tail": [
@@ -557,13 +567,13 @@
       "id": "56533eb9ac21ba0edf2244af",
       "title": "Assignment with Plus Equals",
       "description": [
-        "In Javascript it is common to need to modify the contents of a variable mathematically.  Remember that everything to the right of the equals sign is evaluated first, so we can say:",
+        "In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:",
         "<code>myVar = myVar + 5;</code>",
-        "to add <code>5</code> to <code>myVar</code>.  Since this is such a common pattern, there are operators which do both a mathematical operation and assignement in one step.",
+        "to add <code>5</code> to <code>myVar</code>. Since this is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.",
         "One such operator is the <code>+=</code> operator.",
         "<code>myVar += 5;</code> will add <code>5</code> to <code>myVar</code>.",
         "<h4>Instructions</h4>",
-        "Convert the assignements for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>+=</code> operator."
+        "Convert the assignments for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>+=</code> operator."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
