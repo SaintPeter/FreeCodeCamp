@@ -928,7 +928,7 @@
       "description": [
         "Quotes are not the only characters that can be <dfn>escaped</dfn> inside a string.  Here is a table of common escape sequences:",
         "<table class=\"table table-striped\"><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td>\\'</td><td>single quote</td></tr><tr><td>\\\"</td><td>double quote</td></tr><tr><td>\\\\</td><td>backslash</td></tr><tr><td>\\n</td><td>new line</td></tr><tr><td>\\r</td><td>carriage return</td></tr><tr><td>\\t</td><td>tab</td></tr><tr><td>\\b</td><td>backspace</td></tr><tr><td>\\f</td><td>form feed</td></tr></tbody></table>",
-        "<emphasis>Note that the backslash itself must be escaped in order to display as a backslash.</emphasis>",
+        "<em>Note that the backslash itself must be escaped in order to display as a backslash.</em>",
         "<h4>Instructions</h4>",
         "Encode the following sequence, separated by spaces:<br><code>backslash tab tab carriage-return new-line</code> and assign it to <code>myStr</code>"
       ],
@@ -1030,7 +1030,7 @@
       "id": "56533eb9ac21ba0edf2244b9",
       "title": "Constructing Strings with Variables",
       "description": [
-        "Sometimes you will need to build a string, <a href=\"https://en.wikipedia.org/wiki/Mad_Libs\">Mad Libs</a> style.  By using the concatanation operator (<code>+</code>) you can insert one or more varaibles into a string you're building.",
+        "Sometimes you will need to build a string, <a href=\"https://en.wikipedia.org/wiki/Mad_Libs\">Mad Libs</a> style. By using the concatenation operator (<code>+</code>), you can insert one or more variables into a string you're building.",
         "<h4>Instructions</h4>",
         "Set <code>myName</code> and build <code>myStr</code> with <code>myName</code> between the strings <code>\"My name is \"</code> and <code>\" and I am swell!\"</code>"
       ],
@@ -1106,10 +1106,11 @@
     },
     {
       "id": "bd7123c9c448eddfaeb5bdef",
-      "title": "Check the Length Property of a String Variable",
+      "title": "Find Length of a String",
       "description": [
-        "<code>Data structures</code> have <code>properties</code>. For example, <code>strings</code> have a property called <code>.length</code> that will tell you how many characters are in the string.",
-        "For example, if we created a variable <code>var firstName = \"Charles\"</code>, we could find out how long the string \"Charles\" is by using the <code>firstName.length</code> property.",
+        "You can find the length of a <code>String</code> value by writing <code>.length</code> after the string variable or string literal.",
+        "<code>\"Alan Peter\".length; // 10</code>",
+        "For example, if we created a variable <code>var firstName = \"Charles\"</code>, we could find out how long the string <code>\"Charles\"</code> is by using the <code>firstName.length</code> property.",
         "<h4>Instructions</h4>",
         "Use the <code>.length</code> property to count the number of characters in the <code>lastName</code> variable and assign it to <code>lastNameLength</code>."
       ],
@@ -1149,7 +1150,7 @@
         "Computers don't start counting at 1 like humans do. They start at 0.  This is refered to as <dfn>Zero-based</dfn> indexing.",
         "For example, the character at index 0 in the word \"Charles\" is \"C\". So if <code>var firstName = \"Charles\"</code>, you can get the value of the first letter of the string by using <code>firstName[0]</code>.",
         "<h4>Instructions</h4>",
-        "Use <code>bracket notation</code> to find the first character in the <code>lastName</code> variable and assign it to <code>firstLetterOfLastName</code>.",
+        "Use <dfn>bracket notation</dfn> to find the first character in the <code>lastName</code> variable and assign it to <code>firstLetterOfLastName</code>.",
         "<strong>Hint</strong><br />Try looking at the <code>firstLetterOfFirstName</code> variable declaration if you get stuck."
       ],
       "tests": [
@@ -1187,10 +1188,11 @@
       "id": "56533eb9ac21ba0edf2244ba",
       "title": "Understand String Immutability",
       "description": [
-        "In Javascript, strings are <dfn>immutable</dfn>, which means that they cannot be changed or modified once created.  For example, this code:",
-        "<code>var myStr = \"Bob\";<br />myStr[0] = \"J\";</code>",
-        "will not change the contents of <code>myStr</code> to \"Job\", because the contents of myStr cannot be altered. Note that this does <em>not</em> mean that <code>myStr</code> cannot be change, just that individual characters cannot be changes. The only way to change <code>myStr</code> would be to overwrite the contents with a new string, like this:",
-        "<code>var myStr = \"Bob\";<br />myStr = \"Job\";</code>",
+        "In Javascript, <code>String</code> values are <dfn>immutable</dfn>, which means that they cannot be altered once created.",
+        "For example, the following code:",
+        "<blockquote><code>var myStr = \"Bob\";<br>myStr[0] = \"J\";</code></blockquote>",
+        "cannot change the value of <code>myStr</code> to \"Job\", because the contents of myStr cannot be altered. Note that this does <em>not</em> mean that <code>myStr</code> cannot be changed, just that the individual characters of a <dfn>string literal</dfn> cannot be changed. The only way to change <code>myStr</code> would be to assign it with a new string, like this:",
+        "<blockquote><code>var myStr = \"Bob\";<br>myStr = \"Job\";</code></blockquote>",
         "<h4>Instructions</h4>",
         "Correct the assignment to <code>myStr</code> to achieve the desired effect."
       ],
@@ -1228,11 +1230,11 @@
       "id": "bd7123c9c450eddfaeb5bdef",
       "title": "Use Bracket Notation to Find the Nth Character in a String",
       "description": [
-        "You can also use <code>bracket notation</code> to get the character at other positions within a string.",
-        "Remember that computers start counting at 0, so the first character is actually the zeroth character.",
+        "You can also use <dfn>bracket notation</dfn> to get the character at other positions within a string.",
+        "Remember that computers start counting at <code>0</code>, so the first character is actually the zeroth character.",
         "<h4>Instructions</h4>",
-        "Let's try to set <code>thirdLetterOfLastName</code> to equal the <code>third letter</code> of the <code>lastName</code> variable.",
-        "<strong>Hint</strong><br />Try looking at the <code>secondLetterOfFirstName</code> variable declaration if you get stuck."
+        "Let's try to set <code>thirdLetterOfLastName</code> to equal the third letter of the <code>lastName</code> variable.",
+        "<strong>Hint</strong><br>Try looking at the <code>secondLetterOfFirstName</code> variable declaration if you get stuck."
       ],
       "tests": [
         "assert(thirdLetterOfLastName === 'v', 'message: The <code>thirdLetterOfLastName</code> variable should have the value of <code>v</code>.');"
@@ -1267,8 +1269,8 @@
         "In order to get the last letter of a string, you can subtract one from the string's length.",
         "For example, if <code>var firstName = \"Charles\"</code>, you can get the value of the last letter of the string by using <code>firstName[firstName.length - 1]</code>.",
         "<h4>Instructions</h4>",
-        "Use <code>bracket notation</code> to find the last character in the <code>lastName</code> variable.",
-        "<strong>Hint</strong><br />Try looking at the <code>lastLetterOfFirstName</code> variable declaration if you get stuck."
+        "Use <dfn>bracket notation</dfn> to find the last character in the <code>lastName</code> variable.",
+        "<strong>Hint</strong><br>Try looking at the <code>lastLetterOfFirstName</code> variable declaration if you get stuck."
       ],
       "tests": [
         "assert(lastLetterOfLastName === \"e\", 'message: <code>lastLetterOfLastName</code> should be \"e\".');",
@@ -1304,8 +1306,8 @@
         "You can use the same principle we just used to retrieve the last character in a string to retrieve the Nth-to-last character.",
         "For example, you can get the value of the third-to-last letter of the <code>var firstName = \"Charles\"</code> string by using <code>firstName[firstName.length - 3]</code>",
         "<h4>Instructions</h4>",
-        "Use <code>bracket notation</code> to find the second-to-last character in the <code>lastName</code> string.",
-        "  <strong>Hint</strong><br />Try looking at the <code>thirdToLastLetterOfFirstName</code> variable declaration if you get stuck."
+        "Use <dfn>bracket notation</dfn> to find the second-to-last character in the <code>lastName</code> string.",
+        "  <strong>Hint</strong><br>Try looking at the <code>thirdToLastLetterOfFirstName</code> variable declaration if you get stuck."
       ],
       "tests": [
         "assert(secondToLastLetterOfLastName === 'c', 'message: <code>secondToLastLetterOfLastName</code> should be \"c\".');",
@@ -1338,9 +1340,9 @@
       "id": "56533eb9ac21ba0edf2244bb",
       "title": "Word Blanks",
       "description": [
-        "We will now use our knowledge of strings to build a \"Mad Libs\" style word game we're calling \"Word Blanks\". We have provided a framework for testing your results with different words.  ",
+        "We will now use our knowledge of strings to build a \"<a href='https://en.wikipedia.org/wiki/Mad_Libs' target='_blank'>Mad Libs</a>\" style word game we're calling \"Word Blanks\". We have provided a framework for testing your results with different words.",
         "You will need to use string operators to build a new string, <code>result</code>, using the provided variables: ",
-        "<code>myNoun</code>, <code>myAdjative</code>, <code>myVerb</code>, and <code>myAdverb</code>.",
+        "<code>myNoun</code>, <code>myAdjective</code>, <code>myVerb</code>, and <code>myAdverb</code>.",
         "The tests will run your function with several different inputs to make sure it works properly."
       ],
       "releasedOn": "11/27/2015",
@@ -1351,10 +1353,10 @@
         "assert(/cat/.test(test2) && /little/.test(test2) && /hit/.test(test2) && /slowly/.test(test2),'message: <code>wordBlanks(\"cat\", \"little\", \"hit\", \"slowly\")</code> should contain all of the passed words.');"
       ],
       "challengeSeed": [
-        "function wordBlanks(myNoun, myAdjative, myVerb, myAdverb) {",
+        "function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {",
         "    var result = \"\";",
         "    // Your code below this line",
-        "",
+        "    ",
         "",
         "    // Your code above this line",
         "\treturn result;",
@@ -1368,9 +1370,9 @@
         "var test2 = wordBlanks(\"cat\", \"little\", \"hit\", \"slowly\");"
       ],
       "solutions": [
-        "function wordBlanks(myNoun, myAdjative, myVerb, myAdverb) {",
+        "function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {",
         "    var result = \"\";",
-        "    result = \"Once there was a \" + myNoun + \" which was very \" + myAdjative + \". \";",
+        "    result = \"Once there was a \" + myNoun + \" which was very \" + myAdjective + \". \";",
         "\tresult += \"It \" + myVerb + \" \" + myAdverb + \" around the yard.\";",
         "\treturn result;",
         "}"
@@ -1484,7 +1486,7 @@
       "id": "cf1111c1c11feddfaeb8bdef",
       "title": "Modify Array Data With Indexes",
       "description": [
-        "Unlike strings, the contents of arrays can are <dfn>mutable</dfn> and can be freely changed.",
+        "Unlike strings, the entries of arrays are <dfn>mutable</dfn> and can be changed freely.",
         "For example:",
         "<code>var ourArray = [3,2,1];</code>",
         "<code>ourArray[0] = 1; // equals [1,2,1]</code>",
@@ -1521,12 +1523,8 @@
       "id": "56592a60ddddeae28f7aa8e1",
       "title": "Access Multi-Dimensional Arrays With Indexes",
       "description": [
-        "One way to think of a <dfn>multi-dimensional</dfn> array, is as an <em>array of arrays</em>. When you use brackets to access your array, the first set of bracket refers to the outer-most array, and each subsequent level of brackets refers to the next level in.",
-        "For example:",
-        "<pre>var arr = [<br />           [1,2,3],<br />           [4,5,6], <br />           [7,8,9], <br />           [[10,11,12], 13, 14]<br />          ];</pre>",
-        "<code>arr[0]; // equals [1,2,3]</code>",
-        "<code>arr[1][2]; // equals 6</code>",
-        "<code>arr[3][0][1]; // equals 11</code>",
+        "One way to think of a <dfn>multi-dimensional</dfn> array, is as an <em>array of arrays</em>. When you use brackets to access your array, the first set of bracket refers to the entries in outer-most array, and each subsequent level of brackets refers to the next level of entry in.",
+        "<strong>Example:</strong><blockquote>var arr = [<br>    [1,2,3],<br>    [4,5,6],<br>    [7,8,9],<br>    [[10,11,12], 13, 14]<br>];<br><code>arr[0]; // equals [1,2,3]</code><br><code>arr[1][2]; // equals 6</code><br><code>arr[3][0][1]; // equals 11</code></blockquote>",
         "<h4>Instructions</h4>",
         "Read from <code>myArray</code> using bracket notation so that myData is equal to <code>8</code>"
       ],
@@ -1536,7 +1534,7 @@
       ],
       "challengeSeed": [
         "// Setup",
-        "var myArray = [[1,2,3],[4,5,6], [7,8,9], [[10,11,12], 13, 14]];",
+        "var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];",
         "",
         "// Only change code below this line.",
         "var myData = myArray[0][0];",
@@ -1556,7 +1554,8 @@
       "id": "bg9995c9c69feddfaeb9bdef",
       "title": "Manipulate Arrays With push()",
       "description": [
-        "An easy way to append data to the end of an array is via the <code>push()</code> method.  <code>push()</code> takes a value and \"pushes\" it onto the end of the array.",
+        "An easy way to append data to the end of an array is via the <code>push()</code> function.",
+        "<code>.push()</code> takes one or more <dfn>parameter</dfn> and \"pushes\" it onto the end of the array.",
         "<code>var arr = [1,2,3];</code>",
         "<code>arr.push(4);</code>",
         "<code>// arr is now [1,2,3,4]</code>",
@@ -1564,7 +1563,7 @@
         "Push <code>[\"dog\", 3]</code> onto the end of the <code>myArray</code> variable."
       ],
       "tests": [
-        "\nassert((function(d){if(d[2] != undefined && d[0][0] == 'John' && d[0][1] == 23 && d[2][0] == 'dog' && d[2][1] == 3 && d[2].length == 2){return true;}else{return false;}})(myArray), 'message: <code>myArray</code> should now equal <code>[[\"John\", 23], [\"cat\", 2], [\"dog\", 3]]</code>.');"
+        "assert((function(d){if(d[2] != undefined && d[0][0] == 'John' && d[0][1] == 23 && d[2][0] == 'dog' && d[2][1] == 3 && d[2].length == 2){return true;}else{return false;}})(myArray), 'message: <code>myArray</code> should now equal <code>[[\"John\", 23], [\"cat\", 2], [\"dog\", 3]]</code>.');"
       ],
       "challengeSeed": [
         "// Example",
@@ -1593,9 +1592,10 @@
       "id": "bg9994c9c69feddfaeb9bdef",
       "title": "Manipulate Arrays With pop()",
       "description": [
-        "Another way to change the data in an array is with the <code>.pop()</code> function. ",
-        "<code>.pop()</code> is used to \"pop\" a value off of the end of an array. We can store this \"popped off\" variable by performing <code>pop()</code> within a variable declaration.",
-        "Any type of data structure can be \"popped\" off of an array - numbers, strings, even nested arrays.",
+        "Another way to change the data in an array is with the <code>.pop()</code> function.",
+        "<code>.pop()</code> is used to \"pop\" a value off of the end of an array. We can store this \"popped off\" value by assigning it to a variable.",
+        "Any type of entry can be \"popped\" off of an array - numbers, strings, even nested arrays.",
+        "For example, for the code<br><code>var oneDown = [1, 4, 6].pop();</code><br>the variable <code>oneDown</code> now holds the value <code>6</code> and the array becomes <code>[1, 4]</code>.",
         "<h4>Instructions</h4>",
         "Use the <code>.pop()</code> function to remove the last item from <code>myArray</code>, assigning the \"popped off\" value to <code>removedFromMyArray</code>."
       ],
@@ -1669,8 +1669,8 @@
       "id": "bg9997c9c69feddfaeb9bdef",
       "title": "Manipulate Arrays With unshift()",
       "description": [
-        "Not only can you <code>shift</code> elements off of the beginning of an array, you can also <code>unshift</code> elements to the beginning of an array.",
-        "<code>unshift()</code> works exactly like <code>push()</code>, but instead of adding the element at the end of the array, <code>unshift()</code> adds the element at the beginning of the array.",
+        "Not only can you <code>shift</code> elements off of the beginning of an array, you can also <code>unshift</code> elements to the beginning of an array i.e. add elements in front of the array.",
+        "<code>.unshift()</code> works exactly like <code>.push()</code>, but instead of adding the element at the end of the array, <code>unshift()</code> adds the element at the beginning of the array.",
         "<h4>Instructions</h4>",
         "Add <code>[\"Paul\",35]</code> to the beginning of the <code>myArray</code> variable using <code>unshift()</code>."
       ],
@@ -1708,7 +1708,7 @@
       "title": "Shopping List",
       "description": [
         "Create a shopping list in the variable <code>myList</code>.  The list should be a multi-dimensional array containing several sub-arrays.  ",
-        "The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity. IE:",
+        "The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity i.e.",
         "<code>[\"Chocolate Bar\", 15]</code>",
         "There should be at least 5 sub-arrays in the list."
       ],
@@ -1774,9 +1774,9 @@
         "<blockquote>function functionName() {<br />  console.log(\"Hello World\");<br />}</blockquote>",
         "You can call or <dfn>invoke</dfn> this function by using its name followed by parentheses, like this:",
         "<code>functionName();</code>",
-        "Each time the function is called it will print out the message \"Hello World\" on the dev console. All of the code between the curly braces will be executed every time the function is called.",
+        "Each time the function is called it will print out the message <code>\"Hello World\"</code> on the dev console. All of the code between the curly braces will be executed every time the function is called.",
         "<h4>Instructions</h4>",
-        "Create a function called <code>myFunction</code> which prints \"Hi World\" to the dev console. Call that function."
+        "<ol><li>Create a function called <code>myFunction</code> which prints <code>\"Hi World\"</code> to the dev console.</li><li>Call the function.</li></ol>"
       ],
       "tests": [
         "assert(typeof myFunction === 'function', 'message: <code>myFunction</code> should be a function');",
@@ -1831,13 +1831,13 @@
       "id": "56533eb9ac21ba0edf2244bd",
       "title": "Passing Values to Functions with Arguments",
       "description": [
-        "Functions can take input in the form of <dfn>parameters</dfn>. <code>Parameters</code> are variables that take on the value of the <dfn>arguments</dfn> which are passed in to the function.  Here is a function with two parameters, <code>param1</code> and <code>param2</code>:",
-        "<blockquote>function testFun(param1, param2) {<br />  console.log(param1, param2);<br />}</blockquote>",
+        "Functions can take input in the form of <dfn>parameter</dfn>. Parameters are variables that take on the value of the <dfn>arguments</dfn> which are passed in to the function.  Here is a function with two parameters, <code>param1</code> and <code>param2</code>:",
+        "<blockquote>function testFun(param1, param2) {<br>  console.log(param1, param2);<br>}</blockquote>",
         "Then we can call <code>testFun</code>:",
         "<code>testFun(\"Hello\", \"World\");</code>",
-        "We have <dfn>passed</dfn> two arguments, \"Hello\" and \"World\".  Inside the function, <code>param1</code> will equal \"Hello\" and <code>param2</code> will equal \"World\".  Note that you could call <code>testFun</code> again with different arguments and the parameters would take on the value of the new arguments.",
+        "We have passed two arguments, <code>\"Hello\"</code> and <code>\"World\"</code>.  Inside the function, <code>param1</code> will equal \"Hello\" and <code>param2</code> will equal \"World\".  Note that you could call <code>testFun</code> again with different arguments and the parameters would take on the value of the new arguments.",
         "<h4>Instructions</h4>",
-        "Create a function called <code>myFunction</code> that accepts two arguments and outputs their sum to the dev console. Call your function."
+        "<ol><li>Create a function called <code>myFunction</code> that accepts two arguments and outputs their sum to the dev console.</li><li>Call the function.</li></ol>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -1897,8 +1897,8 @@
       "id": "56533eb9ac21ba0edf2244be",
       "title": "Global Scope and Functions",
       "description": [
-        "In Javascript, <dfn>scope</dfn> refers to the visibility of variables. Variables which are defined outside of a function block have <dfn>Global</dfn> scope.  This means the can be seen everywhere in your Javascript code.  ",
-        "Variables which are used without the <code>var</code> keyword are automatically created in the <code>global</code> scope. This can create unintended concequences elsewhere in your code or when running a function again.  You should always declare your variables with <code>var</code>.",
+        "In Javascript, <dfn>scope</dfn> refers to the visibility of variables. Variables which are defined outside of a function block have <dfn>Global</dfn> scope. This means, they can be seen everywhere in your JavaScript code.",
+        "Variables which are used without the <code>var</code> keyword are automatically created in the <code>global</code> scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with <code>var</code>.",
         "<h4>Instructions</h4>",
         "Declare a <code>global</code> variable <code>myGlobal</code> outside of any function. Initialize it to have a value of <code>10</code> ",
         "Inside function <code>fun1</code>, assign <code>5</code> to <code>oopsGlobal</code> <strong><em>without</em></strong> using the <code>var</code> keyword."
@@ -1933,6 +1933,7 @@
         "",
         "function fun1() {",
         "  // Assign 5 to oopsGlobal Here",
+        "  ",
         "}",
         "",
         "// Only change code above this line",
@@ -1968,30 +1969,47 @@
       "id": "56533eb9ac21ba0edf2244bf",
       "title": "Local Scope and Functions",
       "description": [
-        "Variables which are declared within a function, as well as function parameters are <dfn>local</dfn>. Thos means they are only visible within that function. ",
+        "Variables which are declared within a function, as well as the function parameters have <dfn>local</dfn> scope. That means, they are only visible within that function. ",
         "Here is a function <code>myTest</code> with a local variable called <code>loc</code>.",
-        "<blockquote>function myTest() {<br />  var local1 = \"foo\";<br />  console.log(local1);<br />}<br />myTest(); // \"foo\"<br />console.log(local1); // \"undefined\"</blockquote>",
-        "<code>local1</code> is not defined outside of the function.",
+        "<blockquote>function myTest() {<br>  var loc = \"foo\";<br>  console.log(loc);<br>}<br>myTest(); // \"foo\"<br>console.log(loc); // \"undefined\"</blockquote>",
+        "<code>loc</code> is not defined outside of the function.",
         "<h4>Instructions</h4>",
         "Declare a local variable <code>myVar</code> inside <code>myFunction</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
-        "assert(1===1, 'message: message here');"
+        ""
       ],
       "challengeSeed": [
         "function myFunction() {",
         "  ",
         "  console.log(myVar);",
         "}",
+        "myFunction();",
         "",
+        "// run and check the console ",
+        "// myVar is not defined outside of myFunction",
         "console.log(myVar);",
+        "",
+        "// now remove the console.log line to pass the test",
         ""
       ],
       "tail": [
         ""
       ],
       "solutions": [
+        "function myFunction() {",
+        "  var myVar;",
+        "  console.log(myVar);",
+        "}",
+        "myFunction();",
+        "",
+        "// run and check the console ",
+        "// myVar is not defined outside of myFunction",
+        "",
+        "",
+        "// now remove the console.log line to pass the test",
+        "",
         ""
       ],
       "type": "waypoint",
@@ -2006,9 +2024,9 @@
       "id": "56533eb9ac21ba0edf2244c0",
       "title": "Global vs. Local Scope in Functions",
       "description": [
-        "It is possible to have both a <dfn>local</dfn> and <dfn>global</dfn> variables with the same name.  When you do this, the <code>local</code> variable takes precedence over the <code>global</code> variable.",
+        "It is possible to have both a <dfn>local</dfn> and <dfn>global</dfn> variables with the same name. When you do this, the <code>local</code> variable takes precedence over the <code>global</code> variable.",
         "In this example:",
-        "<blockquote>var someVar = \"Hat\";<br />function myFun() {<br />  var someVar = \"Head\";<br />  return someVar;<br />}</blockquote>",
+        "<blockquote>var someVar = \"Hat\";<br>function myFun() {<br>  var someVar = \"Head\";<br>  return someVar;<br />}</blockquote>",
         "The function <code>myFun</code> will return <code>\"Head\"</code> because the <code>local</code> version of the variable is present.",
         "<h4>Instructions</h4>",
         "Add a local variable to <code>myFunction</code> to override the value of <code>outerWear</code> with <code>\"sweater\"</code>."
@@ -2025,9 +2043,9 @@
         "",
         "function myFunction() {",
         "  // Only change code below this line",
-        "",
-        "",
-        "",
+        "  ",
+        "  ",
+        "  ",
         "  // Only change code above this line",
         "  return outerWear;",
         "}",
@@ -2097,12 +2115,12 @@
       "id": "56533eb9ac21ba0edf2244c3",
       "title": "Assignment with a Returned Value",
       "description": [
-        "If you'll recall from our discussion of <a href=\"challenges/waypoint-storing-values-with-the-equal-operator\">Storing Values with the Equal Operator</a>, everything to the right of the equal sign is resolved before the value is assigned.  This means we can take the return value of a function and assign it to a variable.",
+        "If you'll recall from our discussion of <a href=\"waypoint-storing-values-with-the-equal-operator\" target=\"_blank\">Storing Values with the Equal Operator</a>, everything to the right of the equal sign is resolved before the value is assigned.  This means we can take the return value of a function and assign it to a variable.",
         "Assume we have pre-defined a function <code>sum</code> which adds two numbers together, then: ",
         "<code>var ourSum = sum(5, 12);</code>",
-        "will call <code>sum</code>, which returns a value of <code>17</code> and assigns it to <code>ourSum</code>.",
+        "will call <code>sum</code> function, which returns a value of <code>17</code> and assigns it to <code>ourSum</code> variable.",
         "<h4>Instructions</h4>",
-        "Call <code>process</code> with an argument of <code>7</code> and assign it's return valueto the variable <code>processed</code>."
+        "Call <code>process</code> function with an argument of <code>7</code> and assign it's return value to the variable <code>processed</code>."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -2125,7 +2143,7 @@
         ""
       ],
       "solutions": [
-        ""
+        "processed = process(7);"
       ],
       "type": "waypoint",
       "challengeType": "1",
@@ -2139,8 +2157,8 @@
       "id": "56533eb9ac21ba0edf2244c6",
       "title": "Stand in Line",
       "description": [
-        "In Computer Science a <dfn>queue</dfn> is an abastract datatype where items are kept in order.  New items can be added to the back of the <code>queue</code> and old items are taken off the front of the <code>queue</code>.",
-        "Write a function <code>queue</code> which takes an array and an item as arguments.  Add the item onto the end of the array, then remove and return the item at the front of the queue."
+        "In Computer Science a <dfn>queue</dfn> is an abstract <dfn>Data Structure</dfn> where items are kept in order. New items can be added at the back of the <code>queue</code> and old items are taken off from the front of the <code>queue</code>.",
+        "Write a function <code>queue</code> which takes an \"array\" and an \"item\" as arguments.  Add the item onto the end of the array, then remove and return the item at the front of the queue."
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -2205,12 +2223,12 @@
       "title": "Use Conditional Logic with If Statements",
       "description": [
         "We can use <code>if</code> statements in JavaScript to only execute code if a certain condition is met.",
-        "<code>if</code> statements require a boolean condition to evaluate.  If the boolean evaluates to true, the statement inside the curly braces executes.  If it evaluates to false, the code will not execute.",
+        "<code>if</code> statements require a <dfn>boolean</dfn> condition to evaluate.  If the boolean evaluates to <code>true</code>, the statement inside the curly braces executes. If it evaluates to <code>false</code>, the code will not execute.",
         "For example:",
-        "<blockquote>function test(myVal) {<br />  if (myVal > 10) {<br />     return \"Greater Than\";<br />  }<br />  return \"Not Greater Than\";<br />}</blockquote>",
-        "If <code>myVal</code> is greater than <code>10</code>, the function will return \"Greater Than\".  If it is not, the function will return \"Not Greater Than\".",
+        "<blockquote>function test(myVal) {<br>  if (myVal > 10) {<br>     return \"Greater Than\";<br>  }<br>  return \"Not Greater Than\";<br>}</blockquote>",
+        "If <code>myVal</code> is greater than <code>10</code>, the function will return <code>\"Greater Than\"</code>.  If it is not, the function will return <code>\"Not Greater Than\"</code>.",
         "<h4>Instructions</h4>",
-        "Create an <code>if</code> statement inside the function to return <code>\"Yes\"</code> if <code>testMe</code> is greater than <code>5</code>.  Return <code>\"No\"</code> if it is less than <code>5</code>."
+        "Create an <code>if</code> statement inside the function to return <code>\"Yes\"</code> if <code>testMe</code> is greater than <code>5</code>.  Return <code>\"No\"</code> if it is less than or equal to <code>5</code>."
       ],
       "tests": [
         "assert(typeof myFunction === \"function\", 'message: <code>myFunction</code> should be a function');",
@@ -2233,9 +2251,9 @@
         "function myFunction(testMe) {",
         "",
         "  // Only change code below this line.",
-        "",
-        "",
-        "",
+        "  ",
+        "  ",
+        "  ",
         "  // Only change code above this line.",
         "",
         "}",
@@ -2258,14 +2276,14 @@
       "id": "56533eb9ac21ba0edf2244d0",
       "title": "Comparison with the Equality Operator",
       "description": [
-        "There are many <dfn>Comparison Operators</dfn> in Javascript.  All of these operators return a boolean <code>true</code> or <code>false</code> value.",
-        "The most basic operators is the equality operator <code>==</code>.  The equality operator compares to values and returns true if they're equivilent or false if they are not.  Note that equality is different from assignement (<code>=</code>), which returns the value to the right of the operator.",
-        "<blockquote>function equalityTest(myVal) {<br />  if (myVal == 10) {<br />     return \"Equal\";<br />  }<br />  return \"Not Equal\";<br />}</blockquote>",
+        "There are many <dfn>Comparison Operators</dfn> in JavaScript. All of these operators return a boolean <code>true</code> or <code>false</code> value.",
+        "The most basic operator is the equality operator <code>==</code>.  The equality operator compares two values and returns <code>true</code> if they're equivalent or <code>false</code> if they are not.  Note that equality is different from assignment (<code>=</code>), which assigns the value at the right of the operator to a variable in the left.",
+        "<blockquote>function equalityTest(myVal) {<br>  if (myVal == 10) {<br>     return \"Equal\";<br>  }<br>  return \"Not Equal\";<br>}</blockquote>",
         "If <code>myVal</code> is equal to <code>10</code>, the function will return \"Equal\".  If it is not, the function will return \"Not Equal\".",
         "The equality operator will do it's best to convert values for comparison, for example:",
-        "<blockquote>   1   ==  1        // true<br>  \"1\"  ==  1        // true<br />   1   == '1'       // true<br />   0   == false     // true<br>   0   == null      // false<br>   0   == undefined // false<br> null  == undefined // true</blockquote>",
+        "<blockquote>   1   ==  1        // true<br>  \"1\"  ==  1        // true<br>   1   == '1'       // true<br>   0   == false     // true<br>   0   == null      // false<br>   0   == undefined // false<br> null  == undefined // true</blockquote>",
         "<h4>Instructions</h4>",
-        "Add the <code>equality operator</code> to the indicated line so the function will return \"Equal\" when <code>val</code> is equivilent to <code>12</code>"
+        "Add the <code>equality operator</code> to the indicated line so that the function will return \"Equal\" when <code>val</code> is equivalent to <code>12</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
@@ -2308,8 +2326,9 @@
       "description": [
         "Strict equality (<code>===</code>) is the counterpart to the equality operator (<code>==</code>).  Unlike the equality operator, strict equality tests both the <dfn>type</dfn> and <dfn>value</dfn> of the compared elements.",
         "<strong>Examples</strong><blockquote>3 === 3   // true<br />3 === '3' // false</blockquote>",
+        "<em>In the second example, <code>3</code> is a <code>Number</code> type and <code>'3'</code> is a <code>String</code> type.</em>",
         "<h4>Instructions</h4>",
-        "Change the equality operator to a strict equality on the <code>if</code> statement so the function will return \"Equal\" when <code>val</code> is strictltly equal to <code>7</code>"
+        "Use strict equality operator in <code>if</code> statement so the function will return \"Equal\" when <code>val</code> is strictly equal to <code>7</code>"
       ],
       "releasedOn": "11/27/2015",
       "tests": [
