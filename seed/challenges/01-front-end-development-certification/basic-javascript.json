@@ -90,7 +90,7 @@
       "id": "56533eb9ac21ba0edf2244a8",
       "title": "Storing Values with the Equal Operator",
       "description": [
-        "In Javascript, you can store a value in a variable with the <dfn>assignment</dfn> or <code>equal</code> (<code>=</code>)  operator.",
+        "In JavaScript, you can store a value in a variable with the <dfn>assignment</dfn> or <code>equal</code> (<code>=</code>)  operator.",
         "<code>myVariable = 5;</code>",
         "Assigns the <code>Number</code> value <code>5</code> to <code>myVariable</code>.",
         "Assignment always goes from right to left.  Everything to the right of the <code>=</code> operator is resolved before the value is assigned to the variable to the left of the operator.",
@@ -98,7 +98,7 @@
         "<code>myNum = myVar;</code>",
         "Assigns <code>5</code> to <code>myVar</code> and then resolves <code>myVar</code> to <code>5</code>  again and assigns it to <code>myNum</code>.",
         "<h4>Instructions</h4>",
-        "Assign the value 7 to variable <code>a</code>",
+        "Assign the value <code>7</code> to variable <code>a</code>",
         "Assign the contents of <code>a</code> to variable <code>b</code>."
       ],
       "releasedOn": "January 1, 2016",
@@ -1851,7 +1851,7 @@
       "id": "56533eb9ac21ba0edf2244bd",
       "title": "Passing Values to Functions with Arguments",
       "description": [
-        "Functions can take input in the form of <dfn>parameter</dfn>. Parameters are variables that take on the value of the <dfn>arguments</dfn> which are passed in to the function.  Here is a function with two parameters, <code>param1</code> and <code>param2</code>:",
+        "Functions can take input in the form of <dfn>parameters</dfn>. Parameters are variables that take on the value of the <dfn>arguments</dfn> which are passed into the function.  Here is a function with two parameters, <code>param1</code> and <code>param2</code>:",
         "<blockquote>function testFun(param1, param2) {<br>  console.log(param1, param2);<br>}</blockquote>",
         "Then we can call <code>testFun</code>:",
         "<code>testFun(\"Hello\", \"World\");</code>",
@@ -1917,7 +1917,7 @@
       "id": "56533eb9ac21ba0edf2244be",
       "title": "Global Scope and Functions",
       "description": [
-        "In Javascript, <dfn>scope</dfn> refers to the visibility of variables. Variables which are defined outside of a function block have <dfn>Global</dfn> scope. This means, they can be seen everywhere in your JavaScript code.",
+        "In JavaScript, <dfn>scope</dfn> refers to the visibility of variables. Variables which are defined outside of a function block have <dfn>Global</dfn> scope. This means, they can be seen everywhere in your JavaScript code.",
         "Variables which are used without the <code>var</code> keyword are automatically created in the <code>global</code> scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with <code>var</code>.",
         "<h4>Instructions</h4>",
         "Declare a <code>global</code> variable <code>myGlobal</code> outside of any function. Initialize it to have a value of <code>10</code> ",
@@ -1929,7 +1929,7 @@
         "assert(myGlobal === 10, 'message: <code>myGlobal</code> should have a value of <code>10</code>');",
         "assert(/var\\s+myGlobal/.test(editor.getValue()), 'message: <code>myGlobal</code> should be declared using the <code>var</code> keyword');",
         "assert(typeof oopsGlobal != \"undefined\" && oopsGlobal === 5, 'message: <code>oopsGlobal</code> should have a value of <code>5</code>');",
-        "assert(!/var\\s+oopsGlobal/.test(editor.getValue()), 'message: Do not decalre <code>oopsGlobal</code> using the <code>var</code> keyword');"
+        "assert(!/var\\s+oopsGlobal/.test(editor.getValue()), 'message: Do not declare <code>oopsGlobal</code> using the <code>var</code> keyword');"
       ],
       "head": [
         "var logOutput = \"\";",
@@ -2140,11 +2140,11 @@
         "<code>var ourSum = sum(5, 12);</code>",
         "will call <code>sum</code> function, which returns a value of <code>17</code> and assigns it to <code>ourSum</code> variable.",
         "<h4>Instructions</h4>",
-        "Call <code>process</code> function with an argument of <code>7</code> and assign it's return value to the variable <code>processed</code>."
+        "Call <code>process</code> function with an argument of <code>7</code> and assign its return value to the variable <code>processed</code>."
       ],
       "releasedOn": "January 1, 2016",
       "tests": [
-        "assert(processed === 2, 'message: <code>processed</code> should have a value of <code>10</code>');",
+        "assert(processed === 2, 'message: <code>processed</code> should have a value of <code>2</code>');",
         "assert(/processed\\s*=\\s*process\\(\\s*7\\s*\\)\\s*;/.test(editor.getValue()), 'message: You should assign <code>process</code> to <code>processed</code>');"
       ],
       "challengeSeed": [
@@ -2896,7 +2896,8 @@
       "description": [
         "If you have multiple conditions that need to be addressed, you can chain <code>if</code> statements together with <code>else if</code> statements.",
         "<blockquote>if (num > 15) {<br>  return \"Bigger then 15\";<br>} else if (num < 5) {<br>  return \"Smaller than 5\";<br>} else {<br>  return \"Between 5 and 15\";<br>}</blockquote>",
-        "<h4>Instructions<h4>Convert the logic to use <code>else if</code> statements."
+        "<h4>Instructions</h4>  ",
+        "Convert the logic to use <code>else if</code> statements."
       ],
       "releasedOn": "January 1, 2016",
       "tests": [
@@ -3677,7 +3678,7 @@
       "id": "56533eb9ac21ba0edf2244c9",
       "title": "Accessing Objects Properties with Variables",
       "description": [
-        "Another use of bracket notation on objects is to use a variable to access a property. This can be very useful for iterating through lists of object properties or for doing lookup.",
+        "Another use of bracket notation on objects is to use a variable to access a property. This can be very useful for iterating through lists of the object properties or for doing the lookup.",
         "Here is an example of using a variable to access a property:",
         "<blockquote>var someProp = \"propName\";<br>var myObj = {<br>  propName: \"Some Value\"<br >}<br>myObj[someProp]; // \"Some Value\"</blockquote>",
         "Note that we  do <em>not</em> use quotes around the variable name when using it to access the property because we are using the <em>value</em> of the variable, not the <em>name</em>",
@@ -3977,11 +3978,11 @@
       "id": "567af2437cbaa8c51670a16c",
       "title": "Testing Objects for Properties",
       "description": [
-        "Sometimes it is useful to check of the property of a given object exists or not.  We can use the <code>.hasOwnProperty([propname])</code> method of objects to determine if that object has the given property name. <code>.hasOwnProperty()</code> returns <code>true</code> or <code>false</code> if the property is found or not.",
+        "Sometimes it is useful to check if the property of a given object exists or not. We can use the <code>.hasOwnProperty([propname])</code> method of objects to determine if that object has the given property name. <code>.hasOwnProperty()</code> returns <code>true</code> if the property is found. Otherwise, returns <code>false</code>.",
         "<strong>Example</strong>",
         "<blockquote>var myObj = {<br>  top: \"hat\",<br>  bottom: \"pants\"<br>};<br>myObj.hasOwnProperty(\"hat\");    // true<br>myObj.hasOwnProperty(\"middle\"); // false</blockquote>",
         "<h4>Instructions</h4>",
-        "  Modify function <code>checkObj</code> to test <code>myObj</code> for <code>checkProp</code>.  If the property is found, return that property's value.  If not return <code>\"Not Found\"</code>."
+        "Modify function <code>checkObj</code> to test <code>myObj</code> for <code>checkProp</code>.  If the property is found, return that property's value. If not, return <code>\"Not Found\"</code>."
       ],
       "releasedOn": "January 1, 2016",
       "tests": [
@@ -3999,7 +4000,7 @@
         "",
         "function checkObj(checkProp) {",
         "  // Your Code Here",
-        "",
+        "  ",
         "  return \"Change Me!\";",
         "}",
         "",
@@ -4030,12 +4031,12 @@
       "id": "56533eb9ac21ba0edf2244cb",
       "title": "Introducing JavaScript Object Notation (JSON)",
       "description": [
-        "JavaScript Object Notation or <code>JSON</code> uses the format of Javascript Objects to store data.  JSON is flexible becuase it allows for data structures with arbitrary combinations of <dfn>strings</dfn>, <dfn>numbers</dfn>, <dfn>booleans</dfn>, <dfn>arrays</dfn>, and <dfn>objects</dfn>.  ",
+        "JavaScript Object Notation or <code>JSON</code> uses the format of JavaScript Objects to store data. JSON is flexible because it allows for <dfn>data structures</dfn> with arbitrary combinations of <dfn>strings</dfn>, <dfn>numbers</dfn>, <dfn>booleans</dfn>, <dfn>arrays</dfn>, and <dfn>objects</dfn>.",
         "Here is an example of a JSON object:",
         "<blockquote>var ourMusic = [<br>  {<br>    \"artist\": \"Daft Punk\",<br>    \"title\": \"Homework\",<br>    \"release_year\": 1997,<br>    \"formats\": [ <br>      \"CD\", <br>      \"Cassette\", <br>      \"LP\" ],<br>    \"gold\": true<br>  }<br>];</blockquote>",
-        "This is an array of objects and the object has various pieces of <dfn>metadata</dfn> about an album.  It also has a nested array of formats. Additional album records could be added to the top level array.",
+        "This is an array of objects and the object has various pieces of <dfn>metadata</dfn> about an album. It also has a nested <code>formats</code> array. Additional album records could be added to the top level array.",
         "<h4>Instructions</h4>",
-        "Add a new album to the <code>myMusic</code> JSON object.  Add  <code>artist</code> and <code>title</code> strings, <code>release_year</code> year, and a <code>formats</code> array of strings."
+        "Add a new album to the <code>myMusic</code> JSON object. Add <code>artist</code> and <code>title</code> strings, <code>release_year</code> year, and a <code>formats</code> array of strings."
       ],
       "releasedOn": "January 1, 2016",
       "tests": [
@@ -4047,7 +4048,7 @@
         "assert(myMusic[1].hasOwnProperty('title') && typeof myMusic[1].title === 'string', 'message: <code>myMusic[1]</code> should  contain a <code>title</code> property which is a string');",
         "assert(myMusic[1].hasOwnProperty('release_year') && typeof myMusic[1].release_year === 'number', 'message: <code>myMusic[1]</code> should contain a <code>release_year</code> property which is a number');",
         "assert(myMusic[1].hasOwnProperty('formats') && Array.isArray(myMusic[1].formats), 'message: <code>myMusic[1]</code> should contain a <code>formats</code> property which is an array');",
-        "assert(typeof myMusic[1].formats[0] === 'string' && myMusic[1].formats.length > 1, 'message: <code>formats</code> should be an array of strings with at least two elements');"
+        "assert((function(formats){return formats.every(function(elem){return typeof elem === 'string'})})(myMusic[1].formats) && myMusic[1].formats.length >= 2, 'message: <code>formats</code> should be an array of strings with at least two elements');"
       ],
       "challengeSeed": [
         "var myMusic = [",
@@ -4091,8 +4092,6 @@
         "\t  \"CD\",",
         "\t]",
         "  }",
-        "}",
-        "  // Add record here",
         "];"
       ],
       "type": "waypoint",
@@ -4533,10 +4532,10 @@
       "title": "Nesting For Loops",
       "description": [
         "If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays.  Here is an example:",
-        "<blockquote>var arr = [<br>  [1,2], [3,4], [5,6]<br>];<br>for (var i=0; i &lt; arr.length; i++) {<br>  for (var j=0; k &lt; arr[i].length; j++) {<br>    console.log(arr[i][j]);<br>  }<br>}</blockquote>",
-        "This outputs each sub-element in <code>arr</code> one at a time.  Note that for the inner loop we are checking the <code>.length</code> of <code>arr[i]</code>, since <code>arr[i]</code> is itself an array.",
+        "<blockquote>var arr = [<br>  [1,2], [3,4], [5,6]<br>];<br>for (var i=0; i &lt; arr.length; i++) {<br>  for (var j=0; j &lt; arr[i].length; j++) {<br>    console.log(arr[i][j]);<br>  }<br>}</blockquote>",
+        "This outputs each sub-element in <code>arr</code> one at a time. Note that for the inner loop, we are checking the <code>.length</code> of <code>arr[i]</code>, since <code>arr[i]</code> is itself an array.",
         "<h4>Instructions</h4>",
-        "Modify function <code>multiplyAll</code> so that it multiplies <code>product</code> by each number in the subarrays of <code>arr</code>"
+        "Modify function <code>multiplyAll</code> so that it multiplies the <code>product</code> variable by each number in the sub-arrays of <code>arr</code>"
       ],
       "releasedOn": "January 1, 2016",
       "tests": [
@@ -4548,7 +4547,7 @@
         "function multiplyAll(arr) {",
         "  var product = 1;",
         "  // Only change code below this line",
-        "",
+        "  ",
         "  // Only change code above this line",
         "  return product;",
         "}",
@@ -4616,9 +4615,9 @@
       "id": "56533eb9ac21ba0edf2244e2",
       "title": "Caesar's Cipher",
       "description": [
-        "One of the simplest and most widely known <dfn>ciphers</dfn> is a <code>Caesar cipher</code>, also known as a <code>shift cipher</code>.  In a <code>shift cipher</code> the meanings of the letters are shifted by some set amount.  ",
-        "A common modern use is the <a href=\"https://en.wikipedia.org/wiki/ROT13\">ROT13</a> cipher, where the values of the letters are shifted by 13 places.  Thus 'A' &harr; 'N', 'B' &harr;  'O' and so on.",
-        "Write a function which takes a <code>ROT13</code> encoded string as input and returns a decoded string.  All letters will be uppercase.  Do not transform any non-alphabetic character (IE: spaces, punctiation), but do pass them on.",
+        "One of the simplest and most widely known <dfn>ciphers</dfn> is a <dfn>Caesar cipher</dfn>, also known as a <dfn>shift cipher</dfn>. In a shift cipher the meanings of the letters are shifted by some set amount.  ",
+        "A common modern use is the <a href=\"https://en.wikipedia.org/wiki/ROT13\" target=\"_blank\">ROT13</a> cipher, where the values of the letters are shifted by 13 places. Thus 'A' &harr; 'N', 'B' &harr;  'O' and so on.",
+        "Write a function which takes a <code>ROT13</code> encoded string as input and returns a decoded string. All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation). Keep them as they are.",
         "The provided code transforms the input into an array for you, <code>codeArr</code>. Place the decoded values into the <code>decodedArr</code> array where the provided code will transform it back into a string."
       ],
       "releasedOn": "January 1, 2016",
@@ -4633,9 +4632,9 @@
         "  var codeArr = encodedStr.split(\"\");  // String to Array",
         "  var decodedArr = []; // Your Result goes here",
         "  // Only change code below this line",
-        "",
-        "",
-        "",
+        "  ",
+        "  ",
+        "  ",
         "  // Only change code above this line",
         "  return decodedArr.join(\"\"); // Array to String",
         "}",
