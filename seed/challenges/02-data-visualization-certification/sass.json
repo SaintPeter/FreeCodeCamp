@@ -2,28 +2,97 @@
   "name": "Sass",
   "order": 13.5,
   "isComingSoon": true,
+  "order": 13,
   "time": "5h",
   "challenges": [
     {
-      "id": "bd7158d8c423ede2aeb5bdee",
-      "title": "Learn Sass Challenges",
-      "challengeSeed": [],
+      "id": "5690a4625b3908042c47b327",
+      "title": "CSS with Superpowers!",
       "description": [
+        "Q: How can we write better CSS?",
+        "A: Use a preprocessor.",
+        "",
+        "What is a CSS preprocessor?",
+        "CSS preprocessors take code written in the preprocessed language and then convert that code into CSS. Pretty basic, right?",
+        "",
+        "So what's the point of using one?",
+        "CSS preprocessors such as <code>Sass</code> or <code>Less</code> allow you to do nifty things that regular CSS can't do. They allow you to create <code>variables</code>, write more compact code with <code>nesting</code>, <code>import</code> other CSS files and much more.",
+        "",
+        "In this series of Waypoints, we will be teaching you the basics of <code>Sass</code>"
       ],
-      "type": "waypoint",
-      "challengeType": 3,
+      "challengeSeed": [],
       "tests": [],
-      "nameCn": "",
-      "descriptionCn": [],
-      "nameFr": "",
-      "descriptionFr": [],
-      "nameRu": "",
-      "descriptionRu": [],
-      "nameEs": "Crea una aplicación de votaciones",
-      "descriptionEs": [
-        ],
-      "namePt": "",
-      "descriptionPt": []
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
+      "id": "5690ad185b3908042c47b328",
+      "title": "Storing Data with Sass Variables",
+      "description": [
+        "Just like in Javascript, you can declare variables to store data in. ",
+        "Here is an example: <code>$color = green;</code>",
+        "When decaring variables in <code>Sass</code>, you start by using a <code>$</code> followed by a string.",
+        "Instructions:",
+        "Create a variable <code>$text-color</code> and set it equal to <code>red</code>",
+        "Then change the color of the <code>h1</code> element by using <code>color: $text-color</code>."
+      ],
+      "challengeSeed": [
+        "<style>",
+        "/*Only change code below this line.*/",
+        "  ",
+        "/*Only change code above this line.*/",
+        "</style>",
+        "",
+        "<h1>Sass is awesome!</h1>"
+      ],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
+      "id": "5690af775b3908042c47b329",
+      "title": "Nesting",
+      "description": [],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
+      "id": "5690af845b3908042c47b32a",
+      "title": "Mixins",
+      "description": [],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
+      "id": "5690af925b3908042c47b32b",
+      "title": "Controls",
+      "description": [],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
+      "id": "5690b0355b3908042c47b32c",
+      "title": "Partials",
+      "description": [],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
+      "id": "5690b04e5b3908042c47b32d",
+      "title": "Extend",
+      "description": [],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 0
     }
   ]
 }
