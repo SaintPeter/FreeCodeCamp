@@ -7,7 +7,7 @@
   "challenges": [
     {
       "id": "5690a4625b3908042c47b327",
-      "title": "CSS with Superpowers!",
+      "title": "CSS with Superpowers",
       "description": [
         "Q: How can we write better CSS?",
         "A: Use a preprocessor.",
@@ -32,7 +32,7 @@
         "Just like in Javascript, you can declare variables to store data in. ",
         "Here is an example: <code>$color = green;</code>",
         "When decaring variables in <code>Sass</code>, you start by using a <code>$</code> followed by a string.",
-        "Instructions:",
+        "<h4>Instructions</h4>",
         "Create a variable <code>$text-color</code> and set it equal to <code>red</code>",
         "Then change the color of the <code>h1</code> element by using <code>color: $text-color</code>."
       ],
@@ -51,18 +51,69 @@
     },
     {
       "id": "5690af775b3908042c47b329",
-      "title": "Nesting",
-      "description": [],
-      "challengeSeed": [],
-      "tests": [],
+      "title": "Nesting your CSS",
+      "description": [
+        "<code>Nesting</code> is a really useful way of organising your CSS.",
+        "Normally, you would target each element on a different line to style it, like so:",
+        "<blockquote>nav{<br>&nbsp;&nbsp;background-color: red;<br>}<br><br>nav ul{<br>&nbsp;&nbsp;list-style: none;<br>}</blockquote>",
+        "As you can imagine, in larget projects your CSS file will get pretty messy. Here is where <code>nesting</code> comes in:",
+        "<blockquote>nav{<br>&nbsp;&nbsp;background-color: red;<br><br>&nbsp;&nbsp;ul{<br>&nbsp;&nbsp;&nbsp;&nbsp;list-style: none;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;li{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></blockquote>",
+        "<h4>Instructions</h4>",
+        "Use the <code>nesting</code> technique shown above to style the <code>div</code> and both it's children."
+      ],
+      "challengeSeed": [
+        "<style>",
+        "/*Only change code below this line.*/",
+        "  ",
+        "/*Only change code above this line.*/",
+        "</style>",
+        "",
+        "<div>",
+        "  <h1>Blog Title</h1>",
+        "  <p>This is a paragraph</p>",
+        "</div>"
+      ],
+      "tests": [
+        ""
+      ],
       "type": "waypoint",
       "challengeType": 0
     },
     {
       "id": "5690af845b3908042c47b32a",
-      "title": "Mixins",
-      "description": [],
-      "challengeSeed": [],
+      "title": "Mixing the Cake",
+      "description": [
+        "A <code>mixin</code> lets you make groups of CSS declarations that you want to reuse throughout your site. Consider \"box-shadow\":",
+        "<blockquote>div{<br>&nbsp;&nbsp;-webkit-box-shadow: 0px 0px 4px #fff<br>&nbsp;&nbsp;-moz-box-shadow: 0px 0px 4px #fff<br>&nbsp;&nbsp;-ms-box-shadow: 0px 0px 4px #fff<br>&nbsp;&nbsp;box-shadow: 0px 0px 4px #fff<br>}</blockquote>",
+        "It would be really annyoing to re-write this over and over again for each element that we want to use <code>box-shadow</code> on, or having to change each value becuase we're testing different effects.",
+        "Thankfully, <code>Sass</code> has <code>mixins</code>. Here is how to write one:",
+        "<blockquote>@mixin box-shadow($x, $y, $blur, $c){<br>&nbsp;&nbsp;-webkit-box-shadow: $x, $y, $blur, $c<br>&nbsp;&nbsp;-moz-box-shadow: $x, $y, $blur, $c<br>&nbsp;&nbsp;-ms-box-shadow: $x, $y, $blur, $c<br>&nbsp;&nbsp;box-shadow: $x, $y, $blur, $c<br>}</blockquote>",
+        "This way, we can use a single line: <code>box-shadow</code> and pass parameters without having to re-write all the vendor prefixes. Let's see how to use this:",
+        "<code>div{</code>",
+        "<code>&nbsp;&nbsp;@include box-shadow(0px, 0px, 4px, #fff)</code>",
+        "<code>}</code>",
+        "<h4>Instructions</h4>",
+        "Write your own <code>mixin</code> for <code>border-radius</code> and give it a <code>$val</code> parameter. ",
+        "Then use <code>border-radius</code> to give rounded edges to our <code>#awesome</code> element."
+      ],
+      "challengeSeed": [
+        "<style>",
+        "  /*Add your mixin below this line.*/",
+        "  ",
+        "  /*Add your mixin above this line.*/",
+        "  #awesome{",
+        "    width: 150px;",
+        "    height: 150px;",
+        "    background-color: green;",
+        "    /*Only change code below this line.*/",
+        "",
+        "    /*Only change code above this line.*/",
+        "  }",
+        "</style>",
+        "",
+        "<div id=\"awesome\"></div>",
+        "  "
+      ],
       "tests": [],
       "type": "waypoint",
       "challengeType": 0
