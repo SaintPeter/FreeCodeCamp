@@ -138,8 +138,18 @@
     },
     {
       "id": "5690b04e5b3908042c47b32d",
-      "title": "Extend",
-      "description": [],
+      "title": "Extend your CSS styles",
+      "description": [
+        "Imagine you have a piece of CSS that styles a <code>.panel</code> class. It might have a <code>background-color</code>, <code>height</code> and <code>border</code> for example. ",
+        "Now lets say we want to have another panel called <code>.big-panel</code> but have the same base properties as <code>.panel</code>, but also have a <code>width</code> and <code>font-size</code>.",
+        "We could copy/paste the initial code from <code>.panel</code> but if we also wanted another type of panel, things would get repetitive very quickly.",
+        "This is where <code>extend</code> jumps in. In the case of <code>.panel</code>:",
+        "<blockquote>.panel{<br>&nbsp;&nbsp;background-color: red;<br>&nbsp;&nbsp;height: 70px;<br>&nbsp;&nbsp;border: 2px solid green;<br>}</blockquote>",
+        "We can now <code>extend</code> <code>.panel</code> instead of copy/pasting the code:",
+        "<blockquote>.big-panel{<br>&nbsp;&nbsp;@extend .panel<br>&nbsp;&nbsp;width: 150px;<br>&nbsp;&nbsp;font-size: 2em;<br>}</blockquote>",
+        "And <code>.big-panel</code> will have the same properties as <code>.panel</code> including its own styles.",
+        ""
+      ],
       "challengeSeed": [],
       "tests": [],
       "type": "waypoint",
