@@ -150,6 +150,36 @@
       "challengeType": 0
     },
     {
+      "id": "5695eb91ac2df1d813358ab6",
+      "title": "Continuing with @for",
+      "description": [
+        "The <code>@for</code> directive allows you to add styles in a loop - just like a <code>for</code> loop in JS. ",
+        "We can use <code>@for</code> as either \"start through end\" or \"start to end\". The main difference is that \"start to end\" will exclude the ending number while \"start through end\" will include the ending number. ",
+        "Let's take a look at an example:",
+        "<code>@for $i from 1 through 12 {</code>",
+        "<code>&nbsp;&nbsp;.col-#{$i} { width: 100/12 * $i; }</code>",
+        "<code>}</code>",
+        "This will produce the following:",
+        "<blockquote>.col-1 {<br>&nbsp;&nbsp;width: 8.33333;<br>}<br><br>.col-2 {<br>&nbsp;&nbsp;width: 16.66667;<br>}</blockquote>",
+        "And so on till <code>.col-12</code>. This is a really powerful way of getting a grid layout.",
+        "<h4>Instructions</h4>",
+        "Make a <code>@for</code> directive that takes a variable <code>$j</code> that goes from 1 <b>to</b> 6.",
+        "This should create 5 classes called <code>.text-\"number here\"</code> that makes the <code>font-size</code>: 10 * the number."
+      ],
+      "challengeSeed": [
+        "<style>",
+        "  /*Only change code below this line.*/",
+        "  ",
+        "  /*Only change code above this line.*/",
+        "</style>"
+      ],
+      "tests": [
+        ""
+      ],
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
       "id": "5690b0355b3908042c47b32c",
       "title": "Partials",
       "description": [],
