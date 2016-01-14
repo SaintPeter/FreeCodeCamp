@@ -1,7 +1,5 @@
 {
   "name": "Sass",
-  "order": 13.5,
-  "isComingSoon": true,
   "order": 13,
   "time": "5h",
   "challenges": [
@@ -176,6 +174,34 @@
       "tests": [
         ""
       ],
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
+      "id": "56973caf525185ec1391187f",
+      "title": "Expanding with @each",
+      "description": [
+        "The <code>@each</code> directive uses a list or map instead of starting and ending values like the <code>@for</code> directive. ",
+        "On each iteration, the variable gets assigned to a value from the list or map.",
+        "<blockquote>@each $color in blue, red, green {<br>&nbsp;&nbsp;.#{$color}-text {color: $color}<br>}</blockquote>",
+        "We can also use a map instead of a list:",
+        "<code>$colors: (color1: blue, color2: red, color3: green);</code>",
+        "<blockquote>@each $key, $color in $colors {<br>&nbsp;&nbsp;.#{$color}-text {color: $color}<br>}</blockquote>",
+        "We need to add a <code>$key</code> variable to referance the keys in the map. Else, our complied CSS would have <code>color1</code>, <code>color2</code>.... in it.",
+        "Both of the above code will output:",
+        "<blockquote>.blue-text {<br>&nbsp;&nbsp;color: blue;<br>}<br><br>.red-text {<br>&nbsp;&nbsp;color: red;<br>}</blockquote>",
+        "<h4>Instructions</h4>",
+        "Make an <code>@each</code> directive that goes through a list: <code>blue, black, red</code> and assigns each variable to a <code>.\"color\"-bg</code> class.",
+        "Each class should make the <code>background-color</code> the respective color."
+      ],
+      "challengeSeed": [
+        "<style>",
+        "  /*Only change code below this line.*/",
+        "  ",
+        "  /*Only change code above this line.*/",
+        "</style>"
+      ],
+      "tests": [],
       "type": "waypoint",
       "challengeType": 0
     },
