@@ -2,6 +2,9 @@
   "name": "Sass",
   "order": 13,
   "time": "5h",
+  "order": 13.5,
+  "time": "5 hours",
+  "helpRoom": "HelpDataViz",
   "challenges": [
     {
       "id": "5690a4625b3908042c47b327",
