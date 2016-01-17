@@ -1,8 +1,6 @@
 {
   "name": "Sass",
   "order": 13,
-  "time": "5h",
-  "order": 13.5,
   "time": "5 hours",
   "helpRoom": "HelpDataViz",
   "challenges": [
@@ -209,6 +207,31 @@
       "challengeType": 0
     },
     {
+      "id": "569b0238ce26675006de8754",
+      "title": "Wrapping up with @while",
+      "description": [
+        "The last directive we will talk about is the <code>@while</code> directive.",
+        "Remember how we made a simple grid system using <code>@for</code>? Well, here is the same thing with <code>@while</code>.",
+        "<blockquote>$x: 1;<br>@while $x < 13 {<br> &npsp;&nbsp;.col-#{$x} { width: 100/12 * $x;}<br>&nbsp;&nbsp;$x: $x + 1;<br>};</blockquote>",
+        "We first define a variable <code>$x</code> and set it to 1. We then use the <code>@while</code> directive to create the grid system <i>while<i> <code>$x</code> is less than 13.",
+        "After genreating the CSS, we increment <code>$x</code> by 1 as to avoid an infinite loop!",
+        "This is another way of creating a gid system in <code>Sass</code>.",
+        "<h4>Instructions</h4>",
+        "Use <code>@while</code> to genetrate classes that will be used to manipulate <code>font-size</code>.",
+        "Their should be 10 different classes named <code>text-\"number here\"</code> that set <code>font-size</code> to the repective number in <code>px</code>."
+      ],
+      "challengeSeed": [
+        "<style>",
+        "  /*Only change code below this line.*/",
+        "  ",
+        "  /*Only change code above this line.*/",
+        "</style>"
+      ],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 0
+    },
+    {
       "id": "5690b0355b3908042c47b32c",
       "title": "Partials",
       "description": [],
@@ -235,7 +258,6 @@
       ],
       "challengeSeed": [
         "<style>",
-        "  /*Only change code below this line.*/",
         "  h3{",
         "    text-align: center;",
         "  }",
@@ -244,6 +266,8 @@
         "    border: 1px solid black;",
         "    margin: 0 auto;",
         "  }",
+        "  /*Only change code below this line.*/",
+        "  ",
         "  /*Only change code above this line.*/",
         "</style>",
         "<h3>Posts</h3>",
