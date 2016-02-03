@@ -10,7 +10,7 @@ export default contain(
     actions: ['hikesActions']
   },
   React.createClass({
-    displayName: 'Hike',
+    displayName: 'Video',
 
     propTypes: {
       currentHike: PropTypes.object,
